@@ -1,0 +1,10 @@
+com.cba.toypredictor.app
+com.cba.toypredictor.app.test
+com.cba.toypredictor.dto
+com.cba.toypredictor.enums
+com.cba.toypredictor.exceptions
+com.cba.toypredictor.model
+com.cba.toypredictor.modelbuilder
+com.cba.toypredictor.modelbuilder.test
+com.cba.toypredictor.util.constants
+com.cba.toypredictor.utils

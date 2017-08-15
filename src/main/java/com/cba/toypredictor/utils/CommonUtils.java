@@ -92,7 +92,7 @@ public class CommonUtils {
 	 * @param weather
 	 * @return WeatherCondition
 	 */
-	public static WeatherCondition findWeatherStatus(double weather) {
+	public static WeatherCondition findWeatherCondition(double weather) {
 		if (weather == NumericMapping.SUNNY)
 			return WeatherCondition.SUNNY;
 		else if (weather == NumericMapping.RAIN)

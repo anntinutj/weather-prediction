@@ -14,7 +14,7 @@ public class Constants {
 	public static final String DECISION_TREE_APP_NAME = "Decision Tree Classifier Builder";
 	public static final String DECISION_TREE_REGRESSION_APP_NAME = "Decision Tree Regression Builder";
 	public static final String DECISION_TREE_TEST_APP_NAME = "Decision Tree Classifier Builder Test";
-	public static final String WEATHER_APP_NAME = "Weather Predictor";
+	public static final String WEATHER_PREDICTION_APP_NAME = "Weather Predictor";
 	public static final String LOCAL_STRING = "local";
 	public static final String MODEL_RESOURCE_BUNDLE = "model_local";
 
@@ -23,7 +23,7 @@ public class Constants {
 	public static final String DELIMITTER_COLON = ":";
 	public static final String DELIMTER_SEMI_COLON = ";";
 	public static final String DELIMTER_EQUALS = "=";
-	public static final String DELIMTER_NEWLINE = "\\n";
+	public static final String DELIMTER_NEWLINE = "\n";
 
 	public static final String LATITUDE_SHORT = "lat";
 	public static final String LATITUDE = "Latitude";

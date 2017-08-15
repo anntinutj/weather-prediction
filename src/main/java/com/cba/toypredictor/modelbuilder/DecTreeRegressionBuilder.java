@@ -45,7 +45,7 @@ public class DecTreeRegressionBuilder {
 	 * Getter for temperature Model
 	 * @return DecisionTreeRegressionMdl for temperature
 	 */
-	public static DecisionTreeRegressionMdl getTemperatureMdl() {
+	public DecisionTreeRegressionMdl getTemperatureMdl() {
 		return temperatureMdl;
 	}
 
@@ -53,7 +53,7 @@ public class DecTreeRegressionBuilder {
 	 * Getter for Humidity Model
 	 * @return DecisionTreeRegressionMdl for humidity
 	 */
-	public static DecisionTreeRegressionMdl getHumidityMdl() {
+	public DecisionTreeRegressionMdl getHumidityMdl() {
 		return humidityMdl;
 	}
 
@@ -61,7 +61,7 @@ public class DecTreeRegressionBuilder {
 	 * Getter for Pressure Model
 	 * @return DecisionTreeRegressionMdl for Pressure
 	 */
-	public static DecisionTreeRegressionMdl getPressureMdl() {
+	public DecisionTreeRegressionMdl getPressureMdl() {
 		return pressureMdl;
 	}
 

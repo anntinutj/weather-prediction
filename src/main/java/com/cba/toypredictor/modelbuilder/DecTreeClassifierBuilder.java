@@ -35,7 +35,7 @@ public class DecTreeClassifierBuilder {
 	 * 
 	 * @return DecisionTreeClassification
 	 */
-	public static DecisionTreeClassificationMdl getClassificationModel() {
+	public DecisionTreeClassificationMdl getClassificationModel() {
 		return classificationModel;
 	}
 
