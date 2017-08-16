@@ -5,10 +5,11 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cba.toypredictor.dto.WeatherDTO;
-import com.cba.toypredictor.enums.WeatherCondition;
-import com.cba.toypredictor.util.constants.Constants;
-import com.cba.toypredictor.util.constants.NumericMapping;
+import com.toypredictor.dto.WeatherOutput;
+import com.toypredictor.enums.WeatherCondition;
+import com.toypredictor.util.constants.Constants;
+import com.toypredictor.util.constants.NumericMapping;
+import com.toypredictor.utils.CommonUtils;
 
 /**
  * Test class for Common Utility
@@ -47,7 +48,7 @@ public class CommonUtilsTest {
 	/**
 	 * sample output
 	 */
-	private static WeatherDTO testOutput;
+	private static WeatherOutput testOutput;
 
 	/**
 	 * sampleLocation
@@ -71,7 +72,7 @@ public class CommonUtilsTest {
 		testDouble = -1;
 		delta = 0;
 		testLocation = "/tmp/test.txt";
-		testOutput = new WeatherDTO();
+		testOutput = new WeatherOutput();
 		testOutput.setTime(formattedTime);
 		testOutput.setLatitude(0);
 		testOutput.setLongitude(0);

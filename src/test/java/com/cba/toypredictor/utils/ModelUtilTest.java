@@ -8,10 +8,11 @@ import java.util.ResourceBundle;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cba.toypredictor.enums.WeatherParams;
-import com.cba.toypredictor.model.DecisionTreeClassificationMdl;
-import com.cba.toypredictor.model.DecisionTreeRegressionMdl;
-import com.cba.toypredictor.util.constants.Constants;
+import com.toypredictor.enums.WeatherParams;
+import com.toypredictor.model.DecisionTreeClassificationModel;
+import com.toypredictor.model.DecisionTreeRegressionModel;
+import com.toypredictor.util.constants.Constants;
+import com.toypredictor.utils.ModelUtils;
 
 /**
  * Test class for Model Utility
@@ -25,11 +26,11 @@ public class ModelUtilTest {
 	/**
 	 * Decision Tree Classifier model
 	 */
-	private static DecisionTreeClassificationMdl classificationModel;
+	private static DecisionTreeClassificationModel classificationModel;
 	/**
 	 * Decision Tree Regression model
 	 */
-	private static DecisionTreeRegressionMdl regressionModel;
+	private static DecisionTreeRegressionModel regressionModel;
 	/**
 	 * Resource bundle
 	 */
@@ -45,9 +46,9 @@ public class ModelUtilTest {
 	@Before
 	public void loadData() {
 		classificationModel = ModelUtils
-				.populateModelParameters(new DecisionTreeClassificationMdl());
+				.populateModelParameters(new DecisionTreeClassificationModel());
 		regressionModel = ModelUtils
-				.populateModelParameters(new DecisionTreeRegressionMdl(),
+				.populateModelParameters(new DecisionTreeRegressionModel(),
 						WeatherParams.TEMPERATURE);
 		rb = ResourceBundle.getBundle(Constants.MODEL_RESOURCE_BUNDLE);
 	}

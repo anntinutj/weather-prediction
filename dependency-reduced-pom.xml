@@ -26,7 +26,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.cba.toypredictor.app.PredictWeather</mainClass>
+                  <mainClass>com.toypredictor.app.PredictWeather</mainClass>
                 </transformer>
               </transformers>
               <filters>
