@@ -4,17 +4,8 @@ Machine Learning model for weather generation using Spark Mllib and java
 ## Background
 To simulate an environment (taking into account atmosphere, topography, geography, or similar) that evolves over time and generate weather conditions for a specified location and time.
 
-This can be achieved in multiple ways,  
-1. Using Mathematical equations to predict the weather based on current weather conditions.   
-2. Collect historical data and observe the change in weather based on parameters like latitude, time etc..  
-3. ....(probably more)
 
-The first approach is purely a mathematical substitution, which may need consideration of large number of parameters (say 40 variables in an equation).  
-The second approach is more of solving the problem with some Machine Learning.  
-
-
-#### The ML approach
-The second approach is used in this project, where weather prediction is made using Machine Learning algorithms on Spark Mllib using historical weather data. 
+Machine Learning is used in this project, where weather prediction is made using Machine Learning algorithms on Spark Mllib using historical weather data. 
 The machine learning approach needs a dataset. It also requires data cleaning and formatting. There are lot of api services which provides historical weather data. Some examples,
 * [OpenWeatherMap](https://openweathermap.org/api)
 * [WorldWeatherOnline](https://developer.worldweatheronline.com/)
@@ -22,9 +13,10 @@ The machine learning approach needs a dataset. It also requires data cleaning an
 
 Prediction of weather includes prediction of temperature,pressure,humidity and weather condition. The first three predicates are **continuous** values which needs a **regression model** for prediction. The weather condition can be either of Rain,Snow or Sunny, predicting which is a **classification problem**.
 
-For predicting weather condition, Decision Tree Classifier was used. For predicting humidity, pressure and temperature, two models were used - Linear Regression and Decision Tree Regression and models were created for the same. On comparing the results, Decision Tree Regression provided more accurate results.
+For predicting weather condition, **Decision Tree Classifier** is used.
+For predicting humidity, pressure and temperature **Decision Tree Regression** is used.
 
-Here I have used [spark.mllib](https://spark.apache.org/docs/1.6.0/mllib-guide.html) library for the linear regression, Decision Tree Regression and decision tree classifier. Spark Provides support of big data frameworks, which would help production level deployment
+Here I have used [spark.mllib](https://spark.apache.org/docs/1.6.0/mllib-guide.html) library for the linear regression, Decision Tree Regression and Decision tree classifier. Spark Provides support of big data frameworks, which would help production level deployment
 
 
 ## Prerequisite
@@ -40,37 +32,34 @@ Build the maven project
 ```
 mvn clean install  
 ```
+![alt text](pics/BuildingProject.png)
 
 ## Run the project
 Follow the steps to get output  
 
-To Create & Evaluvate Models
+To Train & Evaluvate Models
 ```
-spark-submit --class com.cba.toypredictor.modelbuilder.DecTreeClassifierBuilder <jarlocation>
-eg: spark-submit --class com.cba.toypredictor.modelbuilder.DecTreeClassifierBuilder weather-prediction-0.0.1-SNAPSHOT.jar
+spark-submit --class com.toypredictor.modelbuilder.TrainAndEvaluvateModel <jarlocation>
+eg: spark-submit --class com.toypredictor.modelbuilder.TrainAndEvaluvateModel weather-prediction-0.0.1-SNAPSHOT.jar
 
-spark-submit --class com.cba.toypredictor.modelbuilder.DecTreeRegressionBuilder <jarlocation>
-eg: spark-submit --class com.cba.toypredictor.modelbuilder.DecTreeRegressionBuilder weather-prediction-0.0.1-SNAPSHOT.jar
 ```
 
 To Predict Weather
 ```
-spark-submit --class com.cba.toypredictor.app.PredictWeather <jarlocation> --lat <latitude> --long  <longitude> --ele  <elevation> --time <unixTimeStamp> --out <outputLocation>
+spark-submit --com.toypredictor.app.PredictWeather <jarlocation> --lat <latitude> --long  <longitude> --ele  <elevation> --time <unixTimeStamp> --out <outputLocation>
 
-eg: spark-submit --class com.cba.toypredictor.app.PredictWeather weather-prediction-0.0.1-SNAPSHOT.jar --lat 24.8614622 --long 67.0099388 --ele 9.870092392 --time 1423123200 --out /home/usr/output.txt
+eg: spark-submit --class com.toypredictor.app.PredictWeather weather-prediction-0.0.1-SNAPSHOT.jar --lat 24.8614622 --long 67.0099388 --ele 9.870092392 --time 1423123200 --out /home/usr/output.txt
 ```
 
+**Result**
 
-```
-##Command line arguments 
+![alt text](pics/OutPut.png)
 
---help          Displays help  
---lat            **Latitiude of the location 
---long           **Longitude of the location
---ele            **Elevation of the location 
---time           **Unix TimeStamp
---out		 **Output Location
+**Command line arguments**
 
+![alt text](pics/runOption.png)
 
-**  -> Mandatory arguments   
+## JAVA DOCS
+
+[JAVA DOCS](https://anntinutj.github.io/weather-prediction/)
 
