@@ -16,7 +16,7 @@ public class Constants {
 	public static final String DECISION_TREE_TEST_APP_NAME = "Decision Tree Classifier Builder Test";
 	public static final String WEATHER_PREDICTION_APP_NAME = "Weather Predictor";
 	public static final String LOCAL_STRING = "local";
-	public static final String MODEL_RESOURCE_BUNDLE = "model_local";
+	public static final String MODEL_RESOURCE_BUNDLE = "model_prep";
 
 	public static final String DELIMITTER_COMA = ",";
 	public static final String DELIMITTER_PIPE = "|";

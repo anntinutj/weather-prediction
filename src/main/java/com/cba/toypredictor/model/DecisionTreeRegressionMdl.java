@@ -66,66 +66,146 @@ public class DecisionTreeRegressionMdl implements AbstractModel, Serializable {
 	 */
 	private String modelLocation;
 
+	/**
+	 * Getter for Training dataset Size
+	 * 
+	 * @return double Training data set Size
+	 */
 	public double getTrainDataSize() {
 		return trainDataSize;
 	}
 
+	/**
+	 * Setter for Training dataset Size
+	 * 
+	 * @param TrainDataSize
+	 */
 	public void setTrainDataSize(double trainDataSize) {
 		this.trainDataSize = trainDataSize;
 	}
 
+	/**
+	 * Getter for Test dataset Size
+	 * 
+	 * @return double Test data set Size
+	 */
 	public double getTestDataSize() {
 		return testDataSize;
 	}
 
+	/**
+	 * Setter for Test dataset Size
+	 * 
+	 * @param TestDataSize
+	 */
 	public void setTestDataSize(double testDataSize) {
 		this.testDataSize = testDataSize;
 	}
 
+	/**
+	 * Getter for Impurity
+	 * 
+	 * @return String
+	 */
 	public String getImpurity() {
 		return impurity;
 	}
 
+	/**
+	 * Setter for Impurity
+	 * 
+	 * @param impurity
+	 */
 	public void setImpurity(String impurity) {
 		this.impurity = impurity;
 	}
 
+	/**
+	 * Getter for Maximum depth size
+	 * 
+	 * @return int
+	 */
 	public int getMaxDepth() {
 		return maxDepth;
 	}
 
+	/**
+	 * Setter for Maximum depth size
+	 * 
+	 * @param maxDepth
+	 */
 	public void setMaxDepth(int maxDepth) {
 		this.maxDepth = maxDepth;
 	}
 
+	/**
+	 * Getter for Max bin size
+	 * 
+	 * @return int
+	 */
 	public int getMaxBins() {
 		return maxBins;
 	}
 
+	/**
+	 * Setter for Max bin size
+	 * 
+	 * @param maxBins
+	 */
 	public void setMaxBins(int maxBins) {
 		this.maxBins = maxBins;
 	}
 
+	/**
+	 * Getter for Categorical Feature
+	 * 
+	 * @return Map
+	 */
 	public Map<Integer, Integer> getCategoricalFeaturesInfo() {
 		return categoricalFeaturesInfo;
 	}
 
+	/**
+	 * Setter for Categorical Feature
+	 * 
+	 * @param categoricalFeaturesInfo
+	 */
 	public void setCategoricalFeaturesInfo(Map<Integer, Integer> categoricalFeaturesInfo) {
 		this.categoricalFeaturesInfo = categoricalFeaturesInfo;
 	}
 
+	/**
+	 * Getter for Model
+	 * 
+	 * @return DecisionTreeModel
+	 */
 	public DecisionTreeModel getModel() {
 		return model;
 	}
 
+	/**
+	 * Setter for Model
+	 * 
+	 * @param model
+	 */
 	public void setModel(DecisionTreeModel model) {
 		this.model = model;
 	}
 
+	/**
+	 * Getter for Model save location
+	 * 
+	 * @return String
+	 */
 	public String getModelLocation() {
 		return modelLocation;
 	}
 
+	/**
+	 * Setter for Model save location
+	 * 
+	 * @param modelLocation
+	 */
 	public void setModelLocation(String modelLocation) {
 		this.modelLocation = modelLocation;
 	}

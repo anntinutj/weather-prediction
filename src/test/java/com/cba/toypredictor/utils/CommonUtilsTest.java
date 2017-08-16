@@ -64,7 +64,7 @@ public class CommonUtilsTest {
 	@Before
 	public void loadData() {
 		testCoordinate = 0.0;
-		timeinMilliSeconds = "1502818365161";
+		timeinMilliSeconds = "1502818365";
 		hour = 23;
 		month = 7;
 		formattedTime = "2017-08-15T17:32:45Z";

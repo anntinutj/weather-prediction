@@ -38,7 +38,7 @@ public class CommonUtils {
 	public static double getHour(String timeinMillis) {
 		try {
 			Calendar calendar = Calendar.getInstance();
-			calendar.setTimeInMillis(Long.parseLong(timeinMillis));
+			calendar.setTimeInMillis(Long.parseLong(timeinMillis)*1000);
 			return (double) calendar.get(Calendar.HOUR_OF_DAY);
 		} catch (Exception e) {
 			logger.error("Failed to get hour from timestamp", e);
@@ -56,7 +56,7 @@ public class CommonUtils {
 	public static double getMonth(String timeinMillis) {
 		try {
 			Calendar calendar = Calendar.getInstance();
-			calendar.setTimeInMillis(Long.parseLong(timeinMillis));
+			calendar.setTimeInMillis(Long.parseLong(timeinMillis)*1000);
 			return (double) calendar.get(Calendar.MONTH);
 		} catch (Exception e) {
 			logger.error("Failed to get Month from timestamp", e);
@@ -75,7 +75,7 @@ public class CommonUtils {
 	public static String timeFormatter(String timeinMillis) {
 		try {
 			Calendar calendar = Calendar.getInstance();
-			calendar.setTimeInMillis(Long.parseLong(timeinMillis));
+			calendar.setTimeInMillis(Long.parseLong(timeinMillis)*1000);
 			DateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT);
 			format.setTimeZone(TimeZone.getTimeZone(Constants.TIMEZONE));
 			return format.format(calendar.getTime());
