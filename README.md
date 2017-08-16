@@ -56,7 +56,7 @@ eg: spark-submit --class com.toypredictor.app.PredictWeather weather-prediction-
 ![alt text](pics/OutPut.png)
 
 ```
-## Command line arguments 
+**Command line arguments**
 
 ![alt text](pics/runOption.png)
 
