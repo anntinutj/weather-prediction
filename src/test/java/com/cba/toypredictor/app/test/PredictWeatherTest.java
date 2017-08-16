@@ -4,7 +4,7 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
-import com.cba.toypredictor.app.PredictWeather;
+import com.toypredictor.app.PredictWeather;
 
 /**
  * Test class for Weather Prediction App

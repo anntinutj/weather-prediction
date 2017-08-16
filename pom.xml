@@ -67,7 +67,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.cba.toypredictor.app.PredictWeather</mainClass>
+									<mainClass>com.toypredictor.app.PredictWeather</mainClass>
 								</transformer>
 							</transformers>
 							<filters>

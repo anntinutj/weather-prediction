@@ -7,8 +7,9 @@ import org.apache.spark.mllib.regression.LabeledPoint;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cba.toypredictor.util.constants.Constants;
-import com.cba.toypredictor.util.constants.NumericMapping;
+import com.toypredictor.util.constants.Constants;
+import com.toypredictor.util.constants.NumericMapping;
+import com.toypredictor.utils.CommonUtils;
 
 /**
  * Test class for Datalabel Utility

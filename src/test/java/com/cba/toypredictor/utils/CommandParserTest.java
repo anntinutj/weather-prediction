@@ -4,6 +4,8 @@ import static org.junit.Assert.assertNotEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.toypredictor.utils.CommandParser;
+
 /**
  * Test class for Command Parser
  * Date : 15-Aug-2017
