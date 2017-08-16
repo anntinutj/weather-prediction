@@ -57,7 +57,7 @@ To Predict Weather
 ```
 spark-submit --class com.cba.toypredictor.app.PredictWeather <jarlocation> --lat <latitude> --long  <longitude> --ele  <elevation> --time <unixTimeStamp> --out <outputLocation>
 
-eg: spark-submit --class com.cba.toypredictor.app.PredictWeather weather-prediction-0.0.1-SNAPSHOT.jar --lat 24.8614622 --long 67.0099388 --ele 9.870092392 --time 1423123200 --out /home/usr/output.txt
+eg: spark-submit --class com.cba.toypredictor.app.PredictWeather weather-prediction-0.0.1-SNAPSHOT.jar --lat 34.8614622 --long 87.0099388 --ele 14.870092392 --time 1502860727 --out /home/usr/output.txt
 ```
 
 
