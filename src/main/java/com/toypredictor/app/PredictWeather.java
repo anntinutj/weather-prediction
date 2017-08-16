@@ -7,8 +7,8 @@ import org.apache.spark.mllib.linalg.Vector;
 import org.apache.spark.mllib.linalg.Vectors;
 import org.apache.spark.mllib.tree.model.DecisionTreeModel;
 
-import com.toypredictor.dto.WeatherOutput;
 import com.toypredictor.dto.WeatherInput;
+import com.toypredictor.dto.WeatherOutput;
 import com.toypredictor.enums.WeatherParams;
 import com.toypredictor.exceptions.WeatherPredictionException;
 import com.toypredictor.model.DecisionTreeClassificationModel;
@@ -31,27 +31,27 @@ public class PredictWeather {
 	/**
 	 * Regression model for Temperature Prediction
 	 */
-	private static DecisionTreeRegressionModel temperatureMdl;
+	private static DecisionTreeRegressionModel temperatureModel;
 	/**
 	 * Regression model for Humidity Prediction
 	 */
-	private static DecisionTreeRegressionModel humidityMdl;
+	private static DecisionTreeRegressionModel humidityModel;
 	/**
 	 * Regression model for Pressure Prediction
 	 */
-	private static DecisionTreeRegressionModel pressureMdl;
+	private static DecisionTreeRegressionModel pressureModel;
 	/**
 	 * Classifier model for Weather Prediction
 	 */
-	private static DecisionTreeClassificationModel classifierMdl;
+	private static DecisionTreeClassificationModel classifierModel;
 
 	/**
 	 * Getter for Temperature Model
 	 * 
 	 * @return DecisionTreeRegressionMdl for Temperature
 	 */
-	public DecisionTreeRegressionModel getTemperatureMdl() {
-		return temperatureMdl;
+	public DecisionTreeRegressionModel getTemperatureModel() {
+		return temperatureModel;
 	}
 
 	/**
@@ -59,8 +59,8 @@ public class PredictWeather {
 	 * 
 	 * @return DecisionTreeRegressionMdl for Humidity
 	 */
-	public DecisionTreeRegressionModel getHumidityMdl() {
-		return humidityMdl;
+	public DecisionTreeRegressionModel getHumidityModel() {
+		return humidityModel;
 	}
 
 	/**
@@ -68,8 +68,8 @@ public class PredictWeather {
 	 * 
 	 * @return DecisionTreeRegressionMdl for Pressure
 	 */
-	public DecisionTreeRegressionModel getPressureMdl() {
-		return pressureMdl;
+	public DecisionTreeRegressionModel getPressureModel() {
+		return pressureModel;
 	}
 
 	/**
@@ -77,8 +77,8 @@ public class PredictWeather {
 	 * 
 	 * @return DecisionTreeClassificationMdl weather Condition
 	 */
-	public DecisionTreeClassificationModel getClassifierMdl() {
-		return classifierMdl;
+	public DecisionTreeClassificationModel getClassifierModel() {
+		return classifierModel;
 	}
 
 	/**
@@ -95,10 +95,10 @@ public class PredictWeather {
 	 * 
 	 */
 	static {
-		temperatureMdl = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.TEMPERATURE);
-		humidityMdl = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.HUMIDITY);
-		pressureMdl = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.PRESSURE);
-		classifierMdl = ModelUtils.populateModelParameters(new DecisionTreeClassificationModel());
+		temperatureModel = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.TEMPERATURE);
+		humidityModel = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.HUMIDITY);
+		pressureModel = ModelUtils.populateModelParameters(new DecisionTreeRegressionModel(), WeatherParams.PRESSURE);
+		classifierModel = ModelUtils.populateModelParameters(new DecisionTreeClassificationModel());
 		weatherDTO = new WeatherOutput();
 	}
 
@@ -124,15 +124,15 @@ public class PredictWeather {
 							inputFeatures.getElevation(), CommonUtils.getMonth(inputFeatures.getUnixTime()),
 							CommonUtils.getHour(inputFeatures.getUnixTime()) });
 
-			double temperature = DecisionTreeModel.load(jsc.sc(), temperatureMdl.getModelLocation())
+			double temperature = DecisionTreeModel.load(jsc.sc(), temperatureModel.getModelLocation())
 					.predict(inputDataRegression);
 			weatherDTO.setTemperature(temperature);
 
-			double humidity = DecisionTreeModel.load(jsc.sc(), humidityMdl.getModelLocation())
+			double humidity = DecisionTreeModel.load(jsc.sc(), humidityModel.getModelLocation())
 					.predict(inputDataRegression);
 			weatherDTO.setHumidity(humidity);
 
-			double pressure = DecisionTreeModel.load(jsc.sc(), pressureMdl.getModelLocation())
+			double pressure = DecisionTreeModel.load(jsc.sc(), pressureModel.getModelLocation())
 					.predict(inputDataRegression);
 			weatherDTO.setPressure(pressure);
 
@@ -143,7 +143,7 @@ public class PredictWeather {
 							CommonUtils.getMonth(inputFeatures.getUnixTime()),
 							CommonUtils.getHour(inputFeatures.getUnixTime()) });
 
-			double weather = DecisionTreeModel.load(jsc.sc(), classifierMdl.getModelLocation())
+			double weather = DecisionTreeModel.load(jsc.sc(), classifierModel.getModelLocation())
 					.predict(testDataClassifier);
 
 			weatherDTO.setWeatherCondition(CommonUtils.findWeatherCondition(weather));
