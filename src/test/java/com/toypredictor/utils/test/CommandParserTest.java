@@ -1,4 +1,4 @@
-package com.toypredictor.utils;
+package com.toypredictor.utils.test;
 
 import static org.junit.Assert.assertNotEquals;
 import org.junit.Before;
