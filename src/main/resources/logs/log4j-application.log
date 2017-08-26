@@ -6977,3 +6977,8 @@ StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,
 2017-08-26 23:19:29 INFO  RemoteActorRefProvider$RemotingTerminator:74 - Remote daemon shut down; proceeding with flushing remote transports.
 2017-08-26 23:19:29 INFO  ShutdownHookManager:58 - Shutdown hook called
 2017-08-26 23:19:29 INFO  ShutdownHookManager:58 - Deleting directory /tmp/spark-7db633dd-b329-495c-a8db-907e4c0645da
+2017-08-27 00:35:06 ERROR CommonUtils:51 - 
+2017-08-27 00:35:06 INFO  CommonUtils:46 - Outputnull|0.0,0.0,0.0|2017-08-15T17:32:45Z|SUNNY|0.0|0.0|0.0
+2017-08-27 00:37:41 ERROR CommonUtils:51 - 
+2017-08-27 00:37:42 INFO  CommonUtils:46 - Outputnull|0.0,0.0,0.0|2017-08-15T17:32:45Z|SUNNY|0.0|0.0|0.0
+2017-08-27 00:37:42 INFO  CommandParser:69 - Input Parameters configured
