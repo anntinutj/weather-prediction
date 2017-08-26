@@ -9,6 +9,7 @@ Machine Learning model for weather generation using Spark Random Forest Mllib Al
 Create a toy simulation of the environment (taking into account things like atmosphere, topography, geography,oceanography, or similar) that evolves over time.
 
 **Approach**
+
 Here we need to predict the following parameters,
 
 1. Temprature
@@ -18,13 +19,13 @@ Here we need to predict the following parameters,
 
 So for predicting the above parameters we can have three approches
 
-1. Using Weather Prediction APIs.
-2. Using Weather prediction Equation provided by different vendors.
+1. Using weather prediction APIs.
+2. Using weather prediction equation provided by different vendors.
 3. Using Machine Learning approachs.
 
-Here we are going to uses the Third approch, **ML Approach**, When considering the parameters to predict we can see that the first three(Temprature,Pressure,Humidity) are continues values, So for predicting continues values a **regression model** is the best suit, Then for weather condition prediction which is having fixed out comes we can go with **classification model**. So we are going to use a **supervised machine learning** algorithm, So we need a dataset of historical values. After obtaining dataset, Next step was **feature selection**.
+Here we are going to uses the Third approch, **ML Approach**, When considering the parameters to predict we can see that the first three(Temprature,Pressure,Humidity) are continues values, So for predicting continues values a **regression model** is the best suit, Then for weather condition prediction which is having fixed outcomes we can go with **classification model**. So we are going to use a **supervised machine learning** algorithm, So we need a dataset of historical values. After obtaining dataset, Next step is **feature selection**.
 
-The following are the set of different features selected for each parameters,
+The following are the set of different features selected for each predictions,
 
 1. Temprature - Latitude, Longitude, Elevation, Month, Day of Month, Hour.
 2. Pressure -  Latitude, Longitude, Elevation, Month, Day of Month, Hour.
@@ -53,7 +54,7 @@ Regression: Averaging. Each tree predicts a real value. The label is predicted t
 
 **Parameters**
 
-Markup : <details>
+<details>
            <summary>1. algo </summary>
            <p>Classification or Regression</p>
          </details>
@@ -110,18 +111,7 @@ Markup : <details>
 * Training time increases roughly linearly in the number of trees.</p>
          </details>
 <details>
-           <summary>12. maxDepth</summary>
-           <p> Number of trees in the forest. 
-
-* Increasing the depth makes the model more expressive and powerful. However, deep trees take longer to train and are also more prone to overfitting.
-* In general, it is acceptable to train deeper trees when using random forests than when using a single decision tree. One tree is more likely to overfit than a random forest (because of the variance reduction from averaging multiple trees in the forest).</p>
-         </details>
-<details>
-<summary>13. subsamplingRate </summary>
-           <p>This parameter specifies the size of the dataset used for training each tree in the forest, as a fraction of the size of the original dataset. The default (1.0) is recommended, but decreasing this fraction can speed up training.</p>
-         </details>
-<details>
-<summary>14. featureSubsetStrategy </summary>
+<summary>12. featureSubsetStrategy </summary>
            <p>Number of features to use as candidates for splitting at each tree node. The number is specified as a fraction or function of the total number of features. Decreasing this number will speed up training, but can sometimes impact performance if too low.</p>
          </details>
 
