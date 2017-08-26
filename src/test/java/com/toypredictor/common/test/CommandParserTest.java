@@ -26,7 +26,7 @@ public class CommandParserTest {
 
 	@Before
 	public void loadData() {
-		String[] args = new String[] { "--time", "1502818365", "--lat", "33.0522342", "--long", "151.2436849", "--elev",
+		String[] args = new String[] { "--time", "1502818365", "--lati", "33.0522342", "--long", "151.2436849", "--elev",
 				"62.8470916748", "--out", "~/output.txt" };
 		cmdParser = new CommandParser(args);
 	}
