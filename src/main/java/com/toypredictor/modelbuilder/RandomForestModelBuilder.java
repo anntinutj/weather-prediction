@@ -102,7 +102,7 @@ public class RandomForestModelBuilder {
 		JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 
 		try {
-
+			logger.info("Random forest Classification Model training Started");
 			// Load weather data from CSV file
 			JavaRDD<String> inputWeatherDataset = jsc.textFile(CommonUtils.getDatasetLocation());
 
@@ -111,27 +111,29 @@ public class RandomForestModelBuilder {
 					.map(ModelUtils.classificationDataTransform);
 
 			// Convert transformed RDD to RDD of Labeled Points
-			JavaRDD<LabeledPoint> labelledDataClassification = transormedDatasetClassification
+			JavaRDD<LabeledPoint> labelledDatasetClassification = transormedDatasetClassification
 					.map(LabelDataUtils.labelDataPointsForClassifier);
 
 			// Split the data into training and test sets (by default 70:30)
-			JavaRDD<LabeledPoint>[] splitsClassification = labelledDataClassification.randomSplit(
+			JavaRDD<LabeledPoint>[] datasetSplitClassification = labelledDatasetClassification.randomSplit(
 					new double[] { classificationModel.getTrainDataSize(), classificationModel.getTestDataSize() });
-			JavaRDD<LabeledPoint> trainingDataClassification = splitsClassification[0];
-			JavaRDD<LabeledPoint> testDataClassification = splitsClassification[1];
+			JavaRDD<LabeledPoint> trainingDataClassification = datasetSplitClassification[0];
+			JavaRDD<LabeledPoint> testDataClassification = datasetSplitClassification[1];
 
-			// Train the decision tree model
+			// Train the Random forest classification model
 			classificationModel.trainModel(trainingDataClassification);
-			// Save the decision tree model
+			// Save the Random forest classification model
 			classificationModel.getModel().save(jsc.sc(), classificationModel.getModelSaveLocation());
-
-			// Evaluate the decision tree classifier model on test instances and
+			logger.info("Random forest Classification Model training Completed");
+			logger.info("Random forest Classification Model test Started");
+			// Evaluate the Random forest classification model on test instances and
 			// compute test error
 			Double testErrorClassification = classificationModel.testModel(testDataClassification);
 
 			logger.info("Test Error Classification : " + testErrorClassification);
 			logger.info("Random Forest Classification model:\n" + classificationModel.getModel().toDebugString());
-
+			logger.info("Random forest Classification Model test Completed");
+			logger.info("Random forest Regression Model training Started");
 			JavaRDD<LabeledPoint>[] temperatureSplit = getTrainingAndTestSplit(inputWeatherDataset,
 					WeatherParams.TEMPERATURE);
 			JavaRDD<LabeledPoint>[] humiditySplit = getTrainingAndTestSplit(inputWeatherDataset,
@@ -139,30 +141,31 @@ public class RandomForestModelBuilder {
 			JavaRDD<LabeledPoint>[] pressureSplit = getTrainingAndTestSplit(inputWeatherDataset,
 					WeatherParams.PRESSURE);
 
-			// Train and save the DecisionTree Regression models
+			// Train and save the Random forest Regression models
 			// Training Temperature Model
 			temperatureModel.trainModel(temperatureSplit[0]);
 			// Saving Temperature Model
 			temperatureModel.getModel().save(jsc.sc(), temperatureModel.getModelSaveLocation());
+			logger.info("Temprature Random forest Regression Model training Completed");
 			// Training Humidity Model
 			humidityModel.trainModel(humiditySplit[0]);
 			// Saving Humidity Model
 			humidityModel.getModel().save(jsc.sc(), humidityModel.getModelSaveLocation());
+			logger.info("Temprature Random forest Regression Model training Completed");
 			// Training Pressure Model
 			pressureModel.trainModel(pressureSplit[0]);
 			// Saving Pressure Model
 			pressureModel.getModel().save(jsc.sc(), pressureModel.getModelSaveLocation());
-
-			logger.info("Model training completed");
-
+			logger.info("Pressure Random forest Regression Model training Completed");
 			// Evaluate each model and compute test error
-			logger.info("Evaluating Models");
+			logger.info("Random forest Regression Model testing Started");
 			Double temperatureTestErr = temperatureModel.testModel(temperatureSplit[1]);
 			logger.info("Temperature Model MSE = " + temperatureTestErr);
 			Double humidityTestErr = humidityModel.testModel(humiditySplit[1]);
 			logger.info("Humidity Model MSE = " + humidityTestErr);
 			Double pressureTestErr = pressureModel.testModel(pressureSplit[1]);
 			logger.info("Pressure Model MSE = " + pressureTestErr);
+			logger.info("Random forest Regression Model testing Completed");
 
 		} catch (Exception e) {
 
@@ -190,7 +193,7 @@ public class RandomForestModelBuilder {
 				JavaRDD<LabeledPoint> labelledPointForTemperature = weatherData
 						.map(LabelDataUtils.labelDataPointsForForTemp);
 
-				// Split the data into training and test sets (by default 7:3)
+				// Split the data into training and test sets (by default 70:30)
 				JavaRDD<LabeledPoint>[] tempratureSplit = labelledPointForTemperature.randomSplit(
 						new double[] { temperatureModel.getTrainDataSize(), temperatureModel.getTestDataSize() });
 				return (tempratureSplit);
@@ -200,7 +203,7 @@ public class RandomForestModelBuilder {
 				JavaRDD<LabeledPoint> labelledPointForHumidity = weatherData
 						.map(LabelDataUtils.labelDataPointsForHumidity);
 
-				// Split the data into training and test sets (by default 7:3)
+				// Split the data into training and test sets (by default 70:30)
 				JavaRDD<LabeledPoint>[] humiditySplit = labelledPointForHumidity.randomSplit(
 						new double[] { humidityModel.getTrainDataSize(), humidityModel.getTestDataSize() });
 				return (humiditySplit);
@@ -210,7 +213,7 @@ public class RandomForestModelBuilder {
 				JavaRDD<LabeledPoint> labelledPointForPressure = weatherData
 						.map(LabelDataUtils.labelDataPointsForPressure);
 
-				// Split the data into training and test sets (by default 7:3)
+				// Split the data into training and test sets (by default 70:30)
 				JavaRDD<LabeledPoint>[] pressureSplit = labelledPointForPressure.randomSplit(
 						new double[] { humidityModel.getTrainDataSize(), humidityModel.getTestDataSize() });
 				return (pressureSplit);

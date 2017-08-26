@@ -151,7 +151,7 @@ public class PredictWeather {
 			outputDetails.setPressure(pressure);
 
 			// Creating input vector to predict classification
-			Vector testDataClassifier = Vectors.sparse(9, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 },
+			Vector inputClassifier = Vectors.sparse(9, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 },
 					new double[] { humidity, inputDetails.getLatitude(), inputDetails.getLongitude(),
 							inputDetails.getElevation(), pressure, temperature,
 							DateTransformUtils.getMonth(inputDetails.getTimeStamp()),
@@ -159,7 +159,7 @@ public class PredictWeather {
 							DateTransformUtils.getHour(inputDetails.getTimeStamp()) });
 
 			double weather = RandomForestModel.load(jsc.sc(), classifierModel.getModelSaveLocation())
-					.predict(testDataClassifier);
+					.predict(inputClassifier);
 
 			outputDetails.setWeatherCondition(ModelUtils.getWeatherCondition(weather));
 

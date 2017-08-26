@@ -17,7 +17,7 @@ public class Constants {
 	public static final String LOCAL_STRING = "local";
 
 	// Command line parser helper Constants
-	public static final String LATITUDE_SHORT = "lat";
+	public static final String LATITUDE_SHORT = "lati";
 	public static final String LATITUDE = "Latitude";
 	public static final String LONGITUDE_SHORT = "long";
 	public static final String LONGITUDE = "Longitude";

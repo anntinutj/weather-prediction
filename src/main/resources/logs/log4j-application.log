@@ -5727,3 +5727,1253 @@ StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,
 2017-08-26 16:11:53 INFO  RemoteActorRefProvider$RemotingTerminator:74 - Remote daemon shut down; proceeding with flushing remote transports.
 2017-08-26 16:11:53 INFO  ShutdownHookManager:58 - Shutdown hook called
 2017-08-26 16:11:53 INFO  ShutdownHookManager:58 - Deleting directory /tmp/spark-106e1f1e-4aa0-4f3c-9541-66e2daaa58a8
+2017-08-26 23:15:42 INFO  SparkContext:58 - Running Spark version 1.6.0
+2017-08-26 23:15:42 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-26 23:15:43 WARN  Utils:70 - Your hostname, Arch-Angel resolves to a loopback address: 127.0.1.1; using 192.168.1.5 instead (on interface wlp6s0)
+2017-08-26 23:15:43 WARN  Utils:70 - Set SPARK_LOCAL_IP if you need to bind to another address
+2017-08-26 23:15:43 INFO  SecurityManager:58 - Changing view acls to: anntinu
+2017-08-26 23:15:43 INFO  SecurityManager:58 - Changing modify acls to: anntinu
+2017-08-26 23:15:43 INFO  SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(anntinu); users with modify permissions: Set(anntinu)
+2017-08-26 23:15:44 INFO  Utils:58 - Successfully started service 'sparkDriver' on port 33510.
+2017-08-26 23:15:44 INFO  Slf4jLogger:80 - Slf4jLogger started
+2017-08-26 23:15:45 INFO  Remoting:74 - Starting remoting
+2017-08-26 23:15:45 INFO  Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.1.5:35343]
+2017-08-26 23:15:45 INFO  Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 35343.
+2017-08-26 23:15:45 INFO  SparkEnv:58 - Registering MapOutputTracker
+2017-08-26 23:15:45 INFO  SparkEnv:58 - Registering BlockManagerMaster
+2017-08-26 23:15:45 INFO  DiskBlockManager:58 - Created local directory at /tmp/blockmgr-dde4aa7d-a6a5-4f6c-ba71-36deb1558857
+2017-08-26 23:15:45 INFO  MemoryStore:58 - MemoryStore started with capacity 1089.8 MB
+2017-08-26 23:15:45 INFO  SparkEnv:58 - Registering OutputCommitCoordinator
+2017-08-26 23:15:46 INFO  Server:272 - jetty-8.y.z-SNAPSHOT
+2017-08-26 23:15:46 INFO  AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2017-08-26 23:15:46 INFO  Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2017-08-26 23:15:46 INFO  SparkUI:58 - Started SparkUI at http://192.168.1.5:4040
+2017-08-26 23:15:46 INFO  Executor:58 - Starting executor ID driver on host localhost
+2017-08-26 23:15:46 INFO  Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45808.
+2017-08-26 23:15:46 INFO  NettyBlockTransferService:58 - Server created on 45808
+2017-08-26 23:15:46 INFO  BlockManagerMaster:58 - Trying to register BlockManager
+2017-08-26 23:15:46 INFO  BlockManagerMasterEndpoint:58 - Registering block manager localhost:45808 with 1089.8 MB RAM, BlockManagerId(driver, localhost, 45808)
+2017-08-26 23:15:46 INFO  BlockManagerMaster:58 - Registered BlockManager
+2017-08-26 23:15:47 INFO  CommandParser:69 - Input Parameters configured
+2017-08-26 23:15:48 INFO  MemoryStore:58 - Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 107.7 KB)
+2017-08-26 23:15:48 INFO  MemoryStore:58 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 117.5 KB)
+2017-08-26 23:15:48 INFO  BlockManagerInfo:58 - Added broadcast_0_piece0 in memory on localhost:45808 (size: 9.8 KB, free: 1089.7 MB)
+2017-08-26 23:15:48 INFO  SparkContext:58 - Created broadcast 0 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:15:49 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:15:49 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Got job 0 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Final stage: ResultStage 0 (first at modelSaveLoad.scala:129)
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Submitting ResultStage 0 (MapPartitionsRDD[1] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:15:49 INFO  MemoryStore:58 - Block broadcast_1 stored as values in memory (estimated size 3.1 KB, free 120.6 KB)
+2017-08-26 23:15:49 INFO  MemoryStore:58 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 1851.0 B, free 122.4 KB)
+2017-08-26 23:15:49 INFO  BlockManagerInfo:58 - Added broadcast_1_piece0 in memory on localhost:45808 (size: 1851.0 B, free: 1089.7 MB)
+2017-08-26 23:15:49 INFO  SparkContext:58 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:15:49 INFO  TaskSchedulerImpl:58 - Adding task set 0.0 with 1 tasks
+2017-08-26 23:15:49 INFO  TaskSetManager:58 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2260 bytes)
+2017-08-26 23:15:49 INFO  Executor:58 - Running task 0.0 in stage 0.0 (TID 0)
+2017-08-26 23:15:49 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/metadata/part-00000:0+215
+2017-08-26 23:15:49 INFO  deprecation:840 - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2017-08-26 23:15:49 INFO  deprecation:840 - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2017-08-26 23:15:49 INFO  deprecation:840 - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2017-08-26 23:15:49 INFO  deprecation:840 - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2017-08-26 23:15:49 INFO  deprecation:840 - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2017-08-26 23:15:49 INFO  Executor:58 - Finished task 0.0 in stage 0.0 (TID 0). 2264 bytes result sent to driver
+2017-08-26 23:15:49 INFO  TaskSetManager:58 - Finished task 0.0 in stage 0.0 (TID 0) in 233 ms on localhost (1/1)
+2017-08-26 23:15:49 INFO  TaskSchedulerImpl:58 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - ResultStage 0 (first at modelSaveLoad.scala:129) finished in 0.275 s
+2017-08-26 23:15:49 INFO  DAGScheduler:58 - Job 0 finished: first at modelSaveLoad.scala:129, took 0.454210 s
+2017-08-26 23:15:50 INFO  BlockManagerInfo:58 - Removed broadcast_1_piece0 on localhost:45808 in memory (size: 1851.0 B, free: 1089.7 MB)
+2017-08-26 23:15:50 INFO  ContextCleaner:58 - Cleaned accumulator 1
+2017-08-26 23:15:50 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data on driver
+2017-08-26 23:15:50 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Got job 1 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Final stage: ResultStage 1 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:15:50 INFO  MemoryStore:58 - Block broadcast_2 stored as values in memory (estimated size 45.0 KB, free 162.5 KB)
+2017-08-26 23:15:50 INFO  MemoryStore:58 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 15.1 KB, free 177.6 KB)
+2017-08-26 23:15:50 INFO  BlockManagerInfo:58 - Added broadcast_2_piece0 in memory on localhost:45808 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:15:50 INFO  SparkContext:58 - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:15:50 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:15:50 INFO  TaskSchedulerImpl:58 - Adding task set 1.0 with 1 tasks
+2017-08-26 23:15:50 INFO  TaskSetManager:58 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2301 bytes)
+2017-08-26 23:15:50 INFO  Executor:58 - Running task 0.0 in stage 1.0 (TID 1)
+2017-08-26 23:15:50 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:15:52 INFO  Executor:58 - Finished task 0.0 in stage 1.0 (TID 1). 2321 bytes result sent to driver
+2017-08-26 23:15:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 1.0 (TID 1) in 1477 ms on localhost (1/1)
+2017-08-26 23:15:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-08-26 23:15:52 INFO  DAGScheduler:58 - ResultStage 1 (parquet at treeEnsembleModels.scala:476) finished in 1.477 s
+2017-08-26 23:15:52 INFO  DAGScheduler:58 - Job 1 finished: parquet at treeEnsembleModels.scala:476, took 1.506123 s
+2017-08-26 23:15:52 INFO  MemoryStore:58 - Block broadcast_3 stored as values in memory (estimated size 59.6 KB, free 237.2 KB)
+2017-08-26 23:15:52 INFO  BlockManagerInfo:58 - Removed broadcast_2_piece0 on localhost:45808 in memory (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:15:52 INFO  MemoryStore:58 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.8 KB, free 235.8 KB)
+2017-08-26 23:15:52 INFO  ContextCleaner:58 - Cleaned accumulator 2
+2017-08-26 23:15:52 INFO  BlockManagerInfo:58 - Added broadcast_3_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:15:52 INFO  SparkContext:58 - Created broadcast 3 from map at treeEnsembleModels.scala:476
+2017-08-26 23:15:52 INFO  deprecation:840 - mapred.min.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize
+2017-08-26 23:15:52 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data/part-r-00000-74694b28-8094-40bc-bb12-746ed699d97c.gz.parquet
+2017-08-26 23:15:53 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Registering RDD 7 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Got job 2 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Final stage: ResultStage 3 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 2)
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 2)
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 2 (MapPartitionsRDD[7] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:15:53 INFO  MemoryStore:58 - Block broadcast_4 stored as values in memory (estimated size 7.5 KB, free 198.4 KB)
+2017-08-26 23:15:53 INFO  MemoryStore:58 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.9 KB, free 202.3 KB)
+2017-08-26 23:15:53 INFO  BlockManagerInfo:58 - Added broadcast_4_piece0 in memory on localhost:45808 (size: 3.9 KB, free: 1089.7 MB)
+2017-08-26 23:15:53 INFO  SparkContext:58 - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:15:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[7] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:15:53 INFO  TaskSchedulerImpl:58 - Adding task set 2.0 with 1 tasks
+2017-08-26 23:15:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2280 bytes)
+2017-08-26 23:15:53 INFO  Executor:58 - Running task 0.0 in stage 2.0 (TID 2)
+2017-08-26 23:15:53 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data/part-r-00000-74694b28-8094-40bc-bb12-746ed699d97c.gz.parquet start: 0 end: 69467 length: 69467 hosts: []}
+2017-08-26 23:15:53 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:15:53 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:15:53 INFO  BlockManagerInfo:58 - Removed broadcast_0_piece0 on localhost:45808 in memory (size: 9.8 KB, free: 1089.7 MB)
+2017-08-26 23:15:53 INFO  GenerateUnsafeProjection:58 - Code generated in 312.85268 ms
+2017-08-26 23:15:53 INFO  GenerateUnsafeProjection:58 - Code generated in 12.398775 ms
+2017-08-26 23:15:53 INFO  GenerateUnsafeProjection:58 - Code generated in 18.256346 ms
+2017-08-26 23:15:53 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 3078 records.
+2017-08-26 23:15:53 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:15:53 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:15:53 INFO  InternalParquetRecordReader:151 - block read in memory in 49 ms. row count = 3078
+2017-08-26 23:15:54 INFO  Executor:58 - Finished task 0.0 in stage 2.0 (TID 2). 2253 bytes result sent to driver
+2017-08-26 23:15:54 INFO  TaskSetManager:58 - Finished task 0.0 in stage 2.0 (TID 2) in 1251 ms on localhost (1/1)
+2017-08-26 23:15:54 INFO  TaskSchedulerImpl:58 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - ShuffleMapStage 2 (groupBy at DecisionTreeModel.scala:263) finished in 1.252 s
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - waiting: Set(ResultStage 3)
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - Submitting ResultStage 3 (MapPartitionsRDD[9] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:15:54 INFO  MemoryStore:58 - Block broadcast_5 stored as values in memory (estimated size 8.6 KB, free 93.3 KB)
+2017-08-26 23:15:54 INFO  MemoryStore:58 - Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.3 KB, free 97.6 KB)
+2017-08-26 23:15:54 INFO  BlockManagerInfo:58 - Added broadcast_5_piece0 in memory on localhost:45808 (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:15:54 INFO  SparkContext:58 - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[9] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:15:54 INFO  TaskSchedulerImpl:58 - Adding task set 3.0 with 1 tasks
+2017-08-26 23:15:54 INFO  TaskSetManager:58 - Starting task 0.0 in stage 3.0 (TID 3, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:15:54 INFO  Executor:58 - Running task 0.0 in stage 3.0 (TID 3)
+2017-08-26 23:15:54 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:15:54 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 7 ms
+2017-08-26 23:15:54 INFO  Executor:58 - Finished task 0.0 in stage 3.0 (TID 3). 326619 bytes result sent to driver
+2017-08-26 23:15:54 INFO  TaskSetManager:58 - Finished task 0.0 in stage 3.0 (TID 3) in 485 ms on localhost (1/1)
+2017-08-26 23:15:54 INFO  TaskSchedulerImpl:58 - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - ResultStage 3 (collect at DecisionTreeModel.scala:265) finished in 0.484 s
+2017-08-26 23:15:54 INFO  DAGScheduler:58 - Job 2 finished: collect at DecisionTreeModel.scala:265, took 1.822611 s
+2017-08-26 23:15:56 INFO  BlockManagerInfo:58 - Removed broadcast_5_piece0 on localhost:45808 in memory (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:15:59 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2017-08-26 23:15:59 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2017-08-26 23:15:59 INFO  MemoryStore:58 - Block broadcast_6 stored as values in memory (estimated size 127.2 KB, free 211.9 KB)
+2017-08-26 23:15:59 INFO  MemoryStore:58 - Block broadcast_6_piece0 stored as bytes in memory (estimated size 13.8 KB, free 225.7 KB)
+2017-08-26 23:15:59 INFO  BlockManagerInfo:58 - Added broadcast_6_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:15:59 INFO  SparkContext:58 - Created broadcast 6 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:15:59 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:15:59 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Got job 3 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Final stage: ResultStage 4 (first at modelSaveLoad.scala:129)
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Submitting ResultStage 4 (MapPartitionsRDD[11] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:15:59 INFO  MemoryStore:58 - Block broadcast_7 stored as values in memory (estimated size 3.1 KB, free 228.8 KB)
+2017-08-26 23:15:59 INFO  MemoryStore:58 - Block broadcast_7_piece0 stored as bytes in memory (estimated size 1852.0 B, free 230.6 KB)
+2017-08-26 23:15:59 INFO  BlockManagerInfo:58 - Added broadcast_7_piece0 in memory on localhost:45808 (size: 1852.0 B, free: 1089.7 MB)
+2017-08-26 23:15:59 INFO  SparkContext:58 - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[11] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:15:59 INFO  TaskSchedulerImpl:58 - Adding task set 4.0 with 1 tasks
+2017-08-26 23:15:59 INFO  TaskSetManager:58 - Starting task 0.0 in stage 4.0 (TID 4, localhost, partition 0,PROCESS_LOCAL, 2257 bytes)
+2017-08-26 23:15:59 INFO  Executor:58 - Running task 0.0 in stage 4.0 (TID 4)
+2017-08-26 23:15:59 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/metadata/part-00000:0+215
+2017-08-26 23:15:59 INFO  Executor:58 - Finished task 0.0 in stage 4.0 (TID 4). 2264 bytes result sent to driver
+2017-08-26 23:15:59 INFO  TaskSetManager:58 - Finished task 0.0 in stage 4.0 (TID 4) in 11 ms on localhost (1/1)
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - ResultStage 4 (first at modelSaveLoad.scala:129) finished in 0.011 s
+2017-08-26 23:15:59 INFO  TaskSchedulerImpl:58 - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2017-08-26 23:15:59 INFO  DAGScheduler:58 - Job 3 finished: first at modelSaveLoad.scala:129, took 0.024184 s
+2017-08-26 23:15:59 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data on driver
+2017-08-26 23:16:00 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Got job 4 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Final stage: ResultStage 5 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ResultStage 5 (MapPartitionsRDD[13] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_8 stored as values in memory (estimated size 45.0 KB, free 275.6 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_8_piece0 stored as bytes in memory (estimated size 15.1 KB, free 290.7 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_8_piece0 in memory on localhost:45808 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[13] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 5.0 with 1 tasks
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 5.0 (TID 5, localhost, partition 0,PROCESS_LOCAL, 2298 bytes)
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 5.0 (TID 5)
+2017-08-26 23:16:00 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 5.0 (TID 5). 2321 bytes result sent to driver
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 5.0 (TID 5) in 52 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ResultStage 5 (parquet at treeEnsembleModels.scala:476) finished in 0.054 s
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Job 4 finished: parquet at treeEnsembleModels.scala:476, took 0.086254 s
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_9 stored as values in memory (estimated size 127.2 KB, free 417.9 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_9_piece0 stored as bytes in memory (estimated size 13.8 KB, free 431.7 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_9_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 9 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:00 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data/part-r-00000-3f3dd79d-c1c9-4fba-88b9-aab738e53dd1.gz.parquet
+2017-08-26 23:16:00 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Registering RDD 17 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Got job 5 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Final stage: ResultStage 7 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 6)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 6)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 6 (MapPartitionsRDD[17] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_10 stored as values in memory (estimated size 7.5 KB, free 439.2 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.9 KB, free 443.1 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_10_piece0 in memory on localhost:45808 (size: 3.9 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[17] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 6.0 with 1 tasks
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 6.0 (TID 6, localhost, partition 0,PROCESS_LOCAL, 2278 bytes)
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 6.0 (TID 6)
+2017-08-26 23:16:00 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data/part-r-00000-3f3dd79d-c1c9-4fba-88b9-aab738e53dd1.gz.parquet start: 0 end: 58882 length: 58882 hosts: []}
+2017-08-26 23:16:00 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:00 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 2632 records.
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:00 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - block read in memory in 3 ms. row count = 2632
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 6.0 (TID 6). 2253 bytes result sent to driver
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 6.0 (TID 6) in 142 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ShuffleMapStage 6 (groupBy at DecisionTreeModel.scala:263) finished in 0.140 s
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - waiting: Set(ResultStage 7)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ResultStage 7 (MapPartitionsRDD[19] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_11 stored as values in memory (estimated size 8.6 KB, free 451.7 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_11_piece0 stored as bytes in memory (estimated size 4.3 KB, free 456.0 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_11_piece0 in memory on localhost:45808 (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 11 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[19] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 7.0 with 1 tasks
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Removed broadcast_8_piece0 on localhost:45808 in memory (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 7.0 (TID 7, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:00 INFO  ContextCleaner:58 - Cleaned accumulator 6
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 7.0 (TID 7)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Removed broadcast_7_piece0 on localhost:45808 in memory (size: 1852.0 B, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  ContextCleaner:58 - Cleaned accumulator 5
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Removed broadcast_6_piece0 on localhost:45808 in memory (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:00 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 7.0 (TID 7). 279330 bytes result sent to driver
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 7.0 (TID 7) in 167 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ResultStage 7 (collect at DecisionTreeModel.scala:265) finished in 0.164 s
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Job 5 finished: collect at DecisionTreeModel.scala:265, took 0.378650 s
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_12 stored as values in memory (estimated size 127.2 KB, free 377.2 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_12_piece0 stored as bytes in memory (estimated size 13.8 KB, free 391.0 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_12_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 12 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:00 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:00 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Got job 6 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Final stage: ResultStage 8 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ResultStage 8 (MapPartitionsRDD[21] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_13 stored as values in memory (estimated size 3.1 KB, free 394.1 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_13_piece0 stored as bytes in memory (estimated size 1855.0 B, free 395.9 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_13_piece0 in memory on localhost:45808 (size: 1855.0 B, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 13 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[21] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 8.0 with 1 tasks
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 8.0 (TID 8, localhost, partition 0,PROCESS_LOCAL, 2256 bytes)
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 8.0 (TID 8)
+2017-08-26 23:16:00 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/metadata/part-00000:0+215
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 8.0 (TID 8). 2264 bytes result sent to driver
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ResultStage 8 (first at modelSaveLoad.scala:129) finished in 0.012 s
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 8.0 (TID 8) in 12 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Job 6 finished: first at modelSaveLoad.scala:129, took 0.027014 s
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data on driver
+2017-08-26 23:16:00 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Got job 7 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Final stage: ResultStage 9 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ResultStage 9 (MapPartitionsRDD[23] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_14 stored as values in memory (estimated size 45.0 KB, free 440.9 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_14_piece0 stored as bytes in memory (estimated size 15.1 KB, free 456.0 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_14_piece0 in memory on localhost:45808 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 14 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[23] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 9.0 with 1 tasks
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 9.0 (TID 9, localhost, partition 0,PROCESS_LOCAL, 2297 bytes)
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 9.0 (TID 9)
+2017-08-26 23:16:00 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 9.0 (TID 9). 2321 bytes result sent to driver
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 9.0 (TID 9) in 33 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ResultStage 9 (parquet at treeEnsembleModels.scala:476) finished in 0.033 s
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Job 7 finished: parquet at treeEnsembleModels.scala:476, took 0.057654 s
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_15 stored as values in memory (estimated size 127.2 KB, free 583.1 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_15_piece0 stored as bytes in memory (estimated size 13.8 KB, free 596.9 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_15_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 15 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:00 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data/part-r-00000-346f81cd-4c77-4145-84d3-3490353d933c.gz.parquet
+2017-08-26 23:16:00 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Registering RDD 27 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Got job 8 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Final stage: ResultStage 11 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 10)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 10)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 10 (MapPartitionsRDD[27] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_16 stored as values in memory (estimated size 7.5 KB, free 604.5 KB)
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_16_piece0 stored as bytes in memory (estimated size 3.9 KB, free 608.4 KB)
+2017-08-26 23:16:00 INFO  BlockManagerInfo:58 - Added broadcast_16_piece0 in memory on localhost:45808 (size: 3.9 KB, free: 1089.7 MB)
+2017-08-26 23:16:00 INFO  SparkContext:58 - Created broadcast 16 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[27] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Adding task set 10.0 with 1 tasks
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Starting task 0.0 in stage 10.0 (TID 10, localhost, partition 0,PROCESS_LOCAL, 2277 bytes)
+2017-08-26 23:16:00 INFO  Executor:58 - Running task 0.0 in stage 10.0 (TID 10)
+2017-08-26 23:16:00 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data/part-r-00000-346f81cd-4c77-4145-84d3-3490353d933c.gz.parquet start: 0 end: 50439 length: 50439 hosts: []}
+2017-08-26 23:16:00 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:00 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 2234 records.
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:00 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:00 INFO  InternalParquetRecordReader:151 - block read in memory in 3 ms. row count = 2234
+2017-08-26 23:16:00 INFO  Executor:58 - Finished task 0.0 in stage 10.0 (TID 10). 2253 bytes result sent to driver
+2017-08-26 23:16:00 INFO  TaskSetManager:58 - Finished task 0.0 in stage 10.0 (TID 10) in 111 ms on localhost (1/1)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - ShuffleMapStage 10 (groupBy at DecisionTreeModel.scala:263) finished in 0.112 s
+2017-08-26 23:16:00 INFO  TaskSchedulerImpl:58 - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - waiting: Set(ResultStage 11)
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:00 INFO  DAGScheduler:58 - Submitting ResultStage 11 (MapPartitionsRDD[29] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:00 INFO  MemoryStore:58 - Block broadcast_17 stored as values in memory (estimated size 8.6 KB, free 616.9 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_17_piece0 stored as bytes in memory (estimated size 4.3 KB, free 621.2 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_17_piece0 in memory on localhost:45808 (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 17 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[29] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Adding task set 11.0 with 1 tasks
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Starting task 0.0 in stage 11.0 (TID 11, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:01 INFO  Executor:58 - Running task 0.0 in stage 11.0 (TID 11)
+2017-08-26 23:16:01 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:01 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2017-08-26 23:16:01 INFO  Executor:58 - Finished task 0.0 in stage 11.0 (TID 11). 237945 bytes result sent to driver
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Finished task 0.0 in stage 11.0 (TID 11) in 100 ms on localhost (1/1)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - ResultStage 11 (collect at DecisionTreeModel.scala:265) finished in 0.100 s
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Job 8 finished: collect at DecisionTreeModel.scala:265, took 0.242526 s
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_18 stored as values in memory (estimated size 127.2 KB, free 748.4 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_18_piece0 stored as bytes in memory (estimated size 13.8 KB, free 762.2 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_18_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 18 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:01 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:01 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Got job 9 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Final stage: ResultStage 12 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting ResultStage 12 (MapPartitionsRDD[31] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_19 stored as values in memory (estimated size 3.1 KB, free 765.3 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_19_piece0 stored as bytes in memory (estimated size 1850.0 B, free 767.1 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_19_piece0 in memory on localhost:45808 (size: 1850.0 B, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 19 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[31] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Adding task set 12.0 with 1 tasks
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Starting task 0.0 in stage 12.0 (TID 12, localhost, partition 0,PROCESS_LOCAL, 2258 bytes)
+2017-08-26 23:16:01 INFO  Executor:58 - Running task 0.0 in stage 12.0 (TID 12)
+2017-08-26 23:16:01 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/metadata/part-00000:0+200
+2017-08-26 23:16:01 INFO  Executor:58 - Finished task 0.0 in stage 12.0 (TID 12). 2249 bytes result sent to driver
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Finished task 0.0 in stage 12.0 (TID 12) in 16 ms on localhost (1/1)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - ResultStage 12 (first at modelSaveLoad.scala:129) finished in 0.016 s
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Job 9 finished: first at modelSaveLoad.scala:129, took 0.026392 s
+2017-08-26 23:16:01 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data on driver
+2017-08-26 23:16:01 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Got job 10 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Final stage: ResultStage 13 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting ResultStage 13 (MapPartitionsRDD[33] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_20 stored as values in memory (estimated size 45.0 KB, free 812.1 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_20_piece0 stored as bytes in memory (estimated size 15.1 KB, free 827.2 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_20_piece0 in memory on localhost:45808 (size: 15.1 KB, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 20 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[33] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Adding task set 13.0 with 1 tasks
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Starting task 0.0 in stage 13.0 (TID 13, localhost, partition 0,PROCESS_LOCAL, 2299 bytes)
+2017-08-26 23:16:01 INFO  Executor:58 - Running task 0.0 in stage 13.0 (TID 13)
+2017-08-26 23:16:01 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:01 INFO  Executor:58 - Finished task 0.0 in stage 13.0 (TID 13). 2321 bytes result sent to driver
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Finished task 0.0 in stage 13.0 (TID 13) in 30 ms on localhost (1/1)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - ResultStage 13 (parquet at treeEnsembleModels.scala:476) finished in 0.030 s
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Job 10 finished: parquet at treeEnsembleModels.scala:476, took 0.051002 s
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_21 stored as values in memory (estimated size 127.2 KB, free 954.3 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_21_piece0 stored as bytes in memory (estimated size 13.8 KB, free 968.1 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_21_piece0 in memory on localhost:45808 (size: 13.8 KB, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 21 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:01 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data/part-r-00000-2d0997ee-2cd9-4345-8d4f-5498691e51d0.gz.parquet
+2017-08-26 23:16:01 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Registering RDD 37 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Got job 11 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Final stage: ResultStage 15 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 14)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 14)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 14 (MapPartitionsRDD[37] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_22 stored as values in memory (estimated size 7.5 KB, free 975.7 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_22_piece0 stored as bytes in memory (estimated size 3.9 KB, free 979.6 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_22_piece0 in memory on localhost:45808 (size: 3.9 KB, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 22 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[37] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Adding task set 14.0 with 1 tasks
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Starting task 0.0 in stage 14.0 (TID 14, localhost, partition 0,PROCESS_LOCAL, 2275 bytes)
+2017-08-26 23:16:01 INFO  Executor:58 - Running task 0.0 in stage 14.0 (TID 14)
+2017-08-26 23:16:01 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data/part-r-00000-2d0997ee-2cd9-4345-8d4f-5498691e51d0.gz.parquet start: 0 end: 16722 length: 16722 hosts: []}
+2017-08-26 23:16:01 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:01 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:01 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 625 records.
+2017-08-26 23:16:01 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:01 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:01 INFO  InternalParquetRecordReader:151 - block read in memory in 1 ms. row count = 625
+2017-08-26 23:16:01 INFO  Executor:58 - Finished task 0.0 in stage 14.0 (TID 14). 2253 bytes result sent to driver
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Finished task 0.0 in stage 14.0 (TID 14) in 53 ms on localhost (1/1)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Removed TaskSet 14.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - ShuffleMapStage 14 (groupBy at DecisionTreeModel.scala:263) finished in 0.054 s
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - waiting: Set(ResultStage 15)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting ResultStage 15 (MapPartitionsRDD[39] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_23 stored as values in memory (estimated size 8.6 KB, free 988.1 KB)
+2017-08-26 23:16:01 INFO  MemoryStore:58 - Block broadcast_23_piece0 stored as bytes in memory (estimated size 4.3 KB, free 992.4 KB)
+2017-08-26 23:16:01 INFO  BlockManagerInfo:58 - Added broadcast_23_piece0 in memory on localhost:45808 (size: 4.3 KB, free: 1089.6 MB)
+2017-08-26 23:16:01 INFO  SparkContext:58 - Created broadcast 23 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[39] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Adding task set 15.0 with 1 tasks
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Starting task 0.0 in stage 15.0 (TID 15, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:01 INFO  Executor:58 - Running task 0.0 in stage 15.0 (TID 15)
+2017-08-26 23:16:01 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:01 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2017-08-26 23:16:01 INFO  Executor:58 - Finished task 0.0 in stage 15.0 (TID 15). 67522 bytes result sent to driver
+2017-08-26 23:16:01 INFO  TaskSetManager:58 - Finished task 0.0 in stage 15.0 (TID 15) in 39 ms on localhost (1/1)
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - ResultStage 15 (collect at DecisionTreeModel.scala:265) finished in 0.039 s
+2017-08-26 23:16:01 INFO  DAGScheduler:58 - Job 11 finished: collect at DecisionTreeModel.scala:265, took 0.123097 s
+2017-08-26 23:16:01 INFO  TaskSchedulerImpl:58 - Removed TaskSet 15.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:01 INFO  CommonUtils:46 - OutputNA|43.653226,-79.3831843,91.7226791382|2015-01-09T03:00:00Z|SUNNY|21.997371207369238|1020.6872112823704|0.6724766796884362
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-08-26 23:16:01 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-08-26 23:16:01 INFO  SparkUI:58 - Stopped Spark web UI at http://192.168.1.5:4040
+2017-08-26 23:16:01 INFO  MapOutputTrackerMasterEndpoint:58 - MapOutputTrackerMasterEndpoint stopped!
+2017-08-26 23:16:01 INFO  MemoryStore:58 - MemoryStore cleared
+2017-08-26 23:16:01 INFO  BlockManager:58 - BlockManager stopped
+2017-08-26 23:16:01 INFO  BlockManagerMaster:58 - BlockManagerMaster stopped
+2017-08-26 23:16:01 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:58 - OutputCommitCoordinator stopped!
+2017-08-26 23:16:01 INFO  SparkContext:58 - Successfully stopped SparkContext
+2017-08-26 23:16:01 INFO  SparkContext:58 - SparkContext already stopped.
+2017-08-26 23:16:01 INFO  ShutdownHookManager:58 - Shutdown hook called
+2017-08-26 23:16:01 INFO  ShutdownHookManager:58 - Deleting directory /tmp/spark-c431bd76-2fab-48fe-a92c-ad0a67b16ede
+2017-08-26 23:16:42 INFO  SparkContext:58 - Running Spark version 1.6.0
+2017-08-26 23:16:42 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-26 23:16:42 WARN  Utils:70 - Your hostname, Arch-Angel resolves to a loopback address: 127.0.1.1; using 192.168.1.5 instead (on interface wlp6s0)
+2017-08-26 23:16:42 WARN  Utils:70 - Set SPARK_LOCAL_IP if you need to bind to another address
+2017-08-26 23:16:42 INFO  SecurityManager:58 - Changing view acls to: anntinu
+2017-08-26 23:16:42 INFO  SecurityManager:58 - Changing modify acls to: anntinu
+2017-08-26 23:16:42 INFO  SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(anntinu); users with modify permissions: Set(anntinu)
+2017-08-26 23:16:43 INFO  Utils:58 - Successfully started service 'sparkDriver' on port 35518.
+2017-08-26 23:16:43 INFO  Slf4jLogger:80 - Slf4jLogger started
+2017-08-26 23:16:44 INFO  Remoting:74 - Starting remoting
+2017-08-26 23:16:44 INFO  Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.1.5:33204]
+2017-08-26 23:16:44 INFO  Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 33204.
+2017-08-26 23:16:44 INFO  SparkEnv:58 - Registering MapOutputTracker
+2017-08-26 23:16:44 INFO  SparkEnv:58 - Registering BlockManagerMaster
+2017-08-26 23:16:44 INFO  DiskBlockManager:58 - Created local directory at /tmp/blockmgr-e4abcc68-1c72-4c9f-af1a-843e484feb03
+2017-08-26 23:16:44 INFO  MemoryStore:58 - MemoryStore started with capacity 1089.8 MB
+2017-08-26 23:16:44 INFO  SparkEnv:58 - Registering OutputCommitCoordinator
+2017-08-26 23:16:44 INFO  Server:272 - jetty-8.y.z-SNAPSHOT
+2017-08-26 23:16:44 INFO  AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2017-08-26 23:16:44 INFO  Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2017-08-26 23:16:44 INFO  SparkUI:58 - Started SparkUI at http://192.168.1.5:4040
+2017-08-26 23:16:44 INFO  Executor:58 - Starting executor ID driver on host localhost
+2017-08-26 23:16:44 INFO  Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40778.
+2017-08-26 23:16:44 INFO  NettyBlockTransferService:58 - Server created on 40778
+2017-08-26 23:16:44 INFO  BlockManagerMaster:58 - Trying to register BlockManager
+2017-08-26 23:16:44 INFO  BlockManagerMasterEndpoint:58 - Registering block manager localhost:40778 with 1089.8 MB RAM, BlockManagerId(driver, localhost, 40778)
+2017-08-26 23:16:44 INFO  BlockManagerMaster:58 - Registered BlockManager
+2017-08-26 23:16:45 INFO  CommandParser:69 - Input Parameters configured
+2017-08-26 23:16:46 INFO  MemoryStore:58 - Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 107.7 KB)
+2017-08-26 23:16:46 INFO  MemoryStore:58 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 117.5 KB)
+2017-08-26 23:16:46 INFO  BlockManagerInfo:58 - Added broadcast_0_piece0 in memory on localhost:40778 (size: 9.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:46 INFO  SparkContext:58 - Created broadcast 0 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:46 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:46 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Got job 0 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Final stage: ResultStage 0 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Submitting ResultStage 0 (MapPartitionsRDD[1] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:46 INFO  MemoryStore:58 - Block broadcast_1 stored as values in memory (estimated size 3.1 KB, free 120.6 KB)
+2017-08-26 23:16:46 INFO  MemoryStore:58 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 1851.0 B, free 122.4 KB)
+2017-08-26 23:16:46 INFO  BlockManagerInfo:58 - Added broadcast_1_piece0 in memory on localhost:40778 (size: 1851.0 B, free: 1089.7 MB)
+2017-08-26 23:16:46 INFO  SparkContext:58 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:46 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:46 INFO  TaskSchedulerImpl:58 - Adding task set 0.0 with 1 tasks
+2017-08-26 23:16:46 INFO  TaskSetManager:58 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2260 bytes)
+2017-08-26 23:16:46 INFO  Executor:58 - Running task 0.0 in stage 0.0 (TID 0)
+2017-08-26 23:16:46 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/metadata/part-00000:0+215
+2017-08-26 23:16:46 INFO  deprecation:840 - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2017-08-26 23:16:46 INFO  deprecation:840 - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2017-08-26 23:16:46 INFO  deprecation:840 - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2017-08-26 23:16:46 INFO  deprecation:840 - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2017-08-26 23:16:46 INFO  deprecation:840 - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2017-08-26 23:16:47 INFO  Executor:58 - Finished task 0.0 in stage 0.0 (TID 0). 2264 bytes result sent to driver
+2017-08-26 23:16:47 INFO  TaskSetManager:58 - Finished task 0.0 in stage 0.0 (TID 0) in 149 ms on localhost (1/1)
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - ResultStage 0 (first at modelSaveLoad.scala:129) finished in 0.176 s
+2017-08-26 23:16:47 INFO  TaskSchedulerImpl:58 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Job 0 finished: first at modelSaveLoad.scala:129, took 0.294708 s
+2017-08-26 23:16:47 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data on driver
+2017-08-26 23:16:47 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Got job 1 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Final stage: ResultStage 1 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:47 INFO  MemoryStore:58 - Block broadcast_2 stored as values in memory (estimated size 45.0 KB, free 167.4 KB)
+2017-08-26 23:16:47 INFO  MemoryStore:58 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 15.1 KB, free 182.5 KB)
+2017-08-26 23:16:47 INFO  BlockManagerInfo:58 - Added broadcast_2_piece0 in memory on localhost:40778 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:47 INFO  SparkContext:58 - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:47 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:47 INFO  TaskSchedulerImpl:58 - Adding task set 1.0 with 1 tasks
+2017-08-26 23:16:47 INFO  TaskSetManager:58 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2301 bytes)
+2017-08-26 23:16:47 INFO  Executor:58 - Running task 0.0 in stage 1.0 (TID 1)
+2017-08-26 23:16:47 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:48 INFO  BlockManagerInfo:58 - Removed broadcast_1_piece0 on localhost:40778 in memory (size: 1851.0 B, free: 1089.7 MB)
+2017-08-26 23:16:48 INFO  ContextCleaner:58 - Cleaned accumulator 1
+2017-08-26 23:16:48 INFO  Executor:58 - Finished task 0.0 in stage 1.0 (TID 1). 2321 bytes result sent to driver
+2017-08-26 23:16:48 INFO  TaskSetManager:58 - Finished task 0.0 in stage 1.0 (TID 1) in 1119 ms on localhost (1/1)
+2017-08-26 23:16:48 INFO  TaskSchedulerImpl:58 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:48 INFO  DAGScheduler:58 - ResultStage 1 (parquet at treeEnsembleModels.scala:476) finished in 1.118 s
+2017-08-26 23:16:48 INFO  DAGScheduler:58 - Job 1 finished: parquet at treeEnsembleModels.scala:476, took 1.153433 s
+2017-08-26 23:16:49 INFO  MemoryStore:58 - Block broadcast_3 stored as values in memory (estimated size 59.6 KB, free 237.2 KB)
+2017-08-26 23:16:49 INFO  MemoryStore:58 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.8 KB, free 251.0 KB)
+2017-08-26 23:16:49 INFO  BlockManagerInfo:58 - Added broadcast_3_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:49 INFO  SparkContext:58 - Created broadcast 3 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:49 INFO  deprecation:840 - mapred.min.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize
+2017-08-26 23:16:49 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data/part-r-00000-74694b28-8094-40bc-bb12-746ed699d97c.gz.parquet
+2017-08-26 23:16:49 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Registering RDD 7 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Got job 2 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Final stage: ResultStage 3 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 2)
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 2)
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 2 (MapPartitionsRDD[7] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:49 INFO  MemoryStore:58 - Block broadcast_4 stored as values in memory (estimated size 7.5 KB, free 258.5 KB)
+2017-08-26 23:16:49 INFO  MemoryStore:58 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.9 KB, free 262.4 KB)
+2017-08-26 23:16:49 INFO  BlockManagerInfo:58 - Added broadcast_4_piece0 in memory on localhost:40778 (size: 3.9 KB, free: 1089.7 MB)
+2017-08-26 23:16:49 INFO  BlockManagerInfo:58 - Removed broadcast_2_piece0 on localhost:40778 in memory (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:49 INFO  SparkContext:58 - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:49 INFO  ContextCleaner:58 - Cleaned accumulator 2
+2017-08-26 23:16:49 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[7] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:49 INFO  TaskSchedulerImpl:58 - Adding task set 2.0 with 1 tasks
+2017-08-26 23:16:49 INFO  TaskSetManager:58 - Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2280 bytes)
+2017-08-26 23:16:49 INFO  Executor:58 - Running task 0.0 in stage 2.0 (TID 2)
+2017-08-26 23:16:49 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/temperatureModel/data/part-r-00000-74694b28-8094-40bc-bb12-746ed699d97c.gz.parquet start: 0 end: 69467 length: 69467 hosts: []}
+2017-08-26 23:16:49 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:49 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:49 INFO  BlockManagerInfo:58 - Removed broadcast_0_piece0 on localhost:40778 in memory (size: 9.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:50 INFO  GenerateUnsafeProjection:58 - Code generated in 304.53213 ms
+2017-08-26 23:16:50 INFO  GenerateUnsafeProjection:58 - Code generated in 13.191034 ms
+2017-08-26 23:16:50 INFO  GenerateUnsafeProjection:58 - Code generated in 16.071767 ms
+2017-08-26 23:16:50 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 3078 records.
+2017-08-26 23:16:50 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:50 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:50 INFO  InternalParquetRecordReader:151 - block read in memory in 30 ms. row count = 3078
+2017-08-26 23:16:50 INFO  Executor:58 - Finished task 0.0 in stage 2.0 (TID 2). 2253 bytes result sent to driver
+2017-08-26 23:16:50 INFO  TaskSetManager:58 - Finished task 0.0 in stage 2.0 (TID 2) in 1130 ms on localhost (1/1)
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - ShuffleMapStage 2 (groupBy at DecisionTreeModel.scala:263) finished in 1.126 s
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - waiting: Set(ResultStage 3)
+2017-08-26 23:16:50 INFO  TaskSchedulerImpl:58 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - Submitting ResultStage 3 (MapPartitionsRDD[9] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:50 INFO  MemoryStore:58 - Block broadcast_5 stored as values in memory (estimated size 8.6 KB, free 93.3 KB)
+2017-08-26 23:16:50 INFO  MemoryStore:58 - Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.3 KB, free 97.6 KB)
+2017-08-26 23:16:50 INFO  BlockManagerInfo:58 - Added broadcast_5_piece0 in memory on localhost:40778 (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:16:50 INFO  SparkContext:58 - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:50 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[9] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:50 INFO  TaskSchedulerImpl:58 - Adding task set 3.0 with 1 tasks
+2017-08-26 23:16:50 INFO  TaskSetManager:58 - Starting task 0.0 in stage 3.0 (TID 3, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:50 INFO  Executor:58 - Running task 0.0 in stage 3.0 (TID 3)
+2017-08-26 23:16:50 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:50 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 7 ms
+2017-08-26 23:16:50 INFO  Executor:58 - Finished task 0.0 in stage 3.0 (TID 3). 326619 bytes result sent to driver
+2017-08-26 23:16:51 INFO  DAGScheduler:58 - ResultStage 3 (collect at DecisionTreeModel.scala:265) finished in 0.464 s
+2017-08-26 23:16:51 INFO  TaskSetManager:58 - Finished task 0.0 in stage 3.0 (TID 3) in 465 ms on localhost (1/1)
+2017-08-26 23:16:51 INFO  TaskSchedulerImpl:58 - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:51 INFO  DAGScheduler:58 - Job 2 finished: collect at DecisionTreeModel.scala:265, took 1.693347 s
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Removed broadcast_5_piece0 on localhost:40778 in memory (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2017-08-26 23:16:52 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_6 stored as values in memory (estimated size 127.2 KB, free 211.9 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_6_piece0 stored as bytes in memory (estimated size 13.8 KB, free 225.7 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_6_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 6 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:52 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:52 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Got job 3 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Final stage: ResultStage 4 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting ResultStage 4 (MapPartitionsRDD[11] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_7 stored as values in memory (estimated size 3.1 KB, free 228.8 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_7_piece0 stored as bytes in memory (estimated size 1852.0 B, free 230.6 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_7_piece0 in memory on localhost:40778 (size: 1852.0 B, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[11] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Adding task set 4.0 with 1 tasks
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Starting task 0.0 in stage 4.0 (TID 4, localhost, partition 0,PROCESS_LOCAL, 2257 bytes)
+2017-08-26 23:16:52 INFO  Executor:58 - Running task 0.0 in stage 4.0 (TID 4)
+2017-08-26 23:16:52 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/metadata/part-00000:0+215
+2017-08-26 23:16:52 INFO  Executor:58 - Finished task 0.0 in stage 4.0 (TID 4). 2264 bytes result sent to driver
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 4.0 (TID 4) in 13 ms on localhost (1/1)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - ResultStage 4 (first at modelSaveLoad.scala:129) finished in 0.013 s
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Job 3 finished: first at modelSaveLoad.scala:129, took 0.028791 s
+2017-08-26 23:16:52 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data on driver
+2017-08-26 23:16:52 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Got job 4 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Final stage: ResultStage 5 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting ResultStage 5 (MapPartitionsRDD[13] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_8 stored as values in memory (estimated size 45.0 KB, free 275.6 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_8_piece0 stored as bytes in memory (estimated size 15.1 KB, free 290.7 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_8_piece0 in memory on localhost:40778 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[13] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Adding task set 5.0 with 1 tasks
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Starting task 0.0 in stage 5.0 (TID 5, localhost, partition 0,PROCESS_LOCAL, 2298 bytes)
+2017-08-26 23:16:52 INFO  Executor:58 - Running task 0.0 in stage 5.0 (TID 5)
+2017-08-26 23:16:52 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:52 INFO  Executor:58 - Finished task 0.0 in stage 5.0 (TID 5). 2321 bytes result sent to driver
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 5.0 (TID 5) in 50 ms on localhost (1/1)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - ResultStage 5 (parquet at treeEnsembleModels.scala:476) finished in 0.052 s
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Job 4 finished: parquet at treeEnsembleModels.scala:476, took 0.075069 s
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_9 stored as values in memory (estimated size 127.2 KB, free 417.9 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_9_piece0 stored as bytes in memory (estimated size 13.8 KB, free 431.7 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_9_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 9 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:52 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data/part-r-00000-3f3dd79d-c1c9-4fba-88b9-aab738e53dd1.gz.parquet
+2017-08-26 23:16:52 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Registering RDD 17 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Got job 5 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Final stage: ResultStage 7 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 6)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 6)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 6 (MapPartitionsRDD[17] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_10 stored as values in memory (estimated size 7.5 KB, free 439.2 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.9 KB, free 443.1 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_10_piece0 in memory on localhost:40778 (size: 3.9 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[17] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Adding task set 6.0 with 1 tasks
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Starting task 0.0 in stage 6.0 (TID 6, localhost, partition 0,PROCESS_LOCAL, 2278 bytes)
+2017-08-26 23:16:52 INFO  Executor:58 - Running task 0.0 in stage 6.0 (TID 6)
+2017-08-26 23:16:52 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/humidityModel/data/part-r-00000-3f3dd79d-c1c9-4fba-88b9-aab738e53dd1.gz.parquet start: 0 end: 58882 length: 58882 hosts: []}
+2017-08-26 23:16:52 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:52 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:52 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 2632 records.
+2017-08-26 23:16:52 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:52 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:52 INFO  InternalParquetRecordReader:151 - block read in memory in 2 ms. row count = 2632
+2017-08-26 23:16:52 INFO  Executor:58 - Finished task 0.0 in stage 6.0 (TID 6). 2253 bytes result sent to driver
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 6.0 (TID 6) in 115 ms on localhost (1/1)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - ShuffleMapStage 6 (groupBy at DecisionTreeModel.scala:263) finished in 0.113 s
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - waiting: Set(ResultStage 7)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting ResultStage 7 (MapPartitionsRDD[19] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_11 stored as values in memory (estimated size 8.6 KB, free 451.7 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_11_piece0 stored as bytes in memory (estimated size 4.3 KB, free 456.0 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_11_piece0 in memory on localhost:40778 (size: 4.3 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 11 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[19] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Adding task set 7.0 with 1 tasks
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Starting task 0.0 in stage 7.0 (TID 7, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:52 INFO  Executor:58 - Running task 0.0 in stage 7.0 (TID 7)
+2017-08-26 23:16:52 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:52 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2017-08-26 23:16:52 INFO  Executor:58 - Finished task 0.0 in stage 7.0 (TID 7). 279330 bytes result sent to driver
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 7.0 (TID 7) in 137 ms on localhost (1/1)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - ResultStage 7 (collect at DecisionTreeModel.scala:265) finished in 0.136 s
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Job 5 finished: collect at DecisionTreeModel.scala:265, took 0.286151 s
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_12 stored as values in memory (estimated size 127.2 KB, free 583.1 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_12_piece0 stored as bytes in memory (estimated size 13.8 KB, free 596.9 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_12_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 12 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:52 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:52 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Got job 6 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Final stage: ResultStage 8 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting ResultStage 8 (MapPartitionsRDD[21] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_13 stored as values in memory (estimated size 3.1 KB, free 600.0 KB)
+2017-08-26 23:16:52 INFO  MemoryStore:58 - Block broadcast_13_piece0 stored as bytes in memory (estimated size 1855.0 B, free 601.8 KB)
+2017-08-26 23:16:52 INFO  BlockManagerInfo:58 - Added broadcast_13_piece0 in memory on localhost:40778 (size: 1855.0 B, free: 1089.7 MB)
+2017-08-26 23:16:52 INFO  SparkContext:58 - Created broadcast 13 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[21] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Adding task set 8.0 with 1 tasks
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Starting task 0.0 in stage 8.0 (TID 8, localhost, partition 0,PROCESS_LOCAL, 2256 bytes)
+2017-08-26 23:16:52 INFO  Executor:58 - Running task 0.0 in stage 8.0 (TID 8)
+2017-08-26 23:16:52 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/metadata/part-00000:0+215
+2017-08-26 23:16:52 INFO  Executor:58 - Finished task 0.0 in stage 8.0 (TID 8). 2264 bytes result sent to driver
+2017-08-26 23:16:52 INFO  TaskSetManager:58 - Finished task 0.0 in stage 8.0 (TID 8) in 10 ms on localhost (1/1)
+2017-08-26 23:16:52 INFO  TaskSchedulerImpl:58 - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - ResultStage 8 (first at modelSaveLoad.scala:129) finished in 0.011 s
+2017-08-26 23:16:52 INFO  DAGScheduler:58 - Job 6 finished: first at modelSaveLoad.scala:129, took 0.022277 s
+2017-08-26 23:16:52 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data on driver
+2017-08-26 23:16:53 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Got job 7 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Final stage: ResultStage 9 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ResultStage 9 (MapPartitionsRDD[23] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_14 stored as values in memory (estimated size 45.0 KB, free 646.8 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_14_piece0 stored as bytes in memory (estimated size 15.1 KB, free 661.9 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_14_piece0 in memory on localhost:40778 (size: 15.1 KB, free: 1089.7 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 14 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[23] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 9.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 9.0 (TID 9, localhost, partition 0,PROCESS_LOCAL, 2297 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 9.0 (TID 9)
+2017-08-26 23:16:53 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 9.0 (TID 9). 2321 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 9.0 (TID 9) in 18 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ResultStage 9 (parquet at treeEnsembleModels.scala:476) finished in 0.018 s
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Job 7 finished: parquet at treeEnsembleModels.scala:476, took 0.040453 s
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_15 stored as values in memory (estimated size 127.2 KB, free 789.1 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_15_piece0 stored as bytes in memory (estimated size 13.8 KB, free 802.9 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_15_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 15 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:53 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data/part-r-00000-346f81cd-4c77-4145-84d3-3490353d933c.gz.parquet
+2017-08-26 23:16:53 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Registering RDD 27 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Got job 8 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Final stage: ResultStage 11 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 10)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 10)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 10 (MapPartitionsRDD[27] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_16 stored as values in memory (estimated size 7.5 KB, free 810.4 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_16_piece0 stored as bytes in memory (estimated size 3.9 KB, free 814.3 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_16_piece0 in memory on localhost:40778 (size: 3.9 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 16 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[27] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 10.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 10.0 (TID 10, localhost, partition 0,PROCESS_LOCAL, 2277 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 10.0 (TID 10)
+2017-08-26 23:16:53 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/presureModel/data/part-r-00000-346f81cd-4c77-4145-84d3-3490353d933c.gz.parquet start: 0 end: 50439 length: 50439 hosts: []}
+2017-08-26 23:16:53 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:53 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 2234 records.
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:53 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - block read in memory in 2 ms. row count = 2234
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 10.0 (TID 10). 2253 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 10.0 (TID 10) in 116 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ShuffleMapStage 10 (groupBy at DecisionTreeModel.scala:263) finished in 0.115 s
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - waiting: Set(ResultStage 11)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ResultStage 11 (MapPartitionsRDD[29] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_17 stored as values in memory (estimated size 8.6 KB, free 822.9 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_17_piece0 stored as bytes in memory (estimated size 4.3 KB, free 827.2 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_17_piece0 in memory on localhost:40778 (size: 4.3 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 17 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[29] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 11.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 11.0 (TID 11, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 11.0 (TID 11)
+2017-08-26 23:16:53 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:53 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 11.0 (TID 11). 237945 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 11.0 (TID 11) in 110 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ResultStage 11 (collect at DecisionTreeModel.scala:265) finished in 0.110 s
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Job 8 finished: collect at DecisionTreeModel.scala:265, took 0.251343 s
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_18 stored as values in memory (estimated size 127.2 KB, free 954.3 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_18_piece0 stored as bytes in memory (estimated size 13.8 KB, free 968.1 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_18_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 18 from textFile at modelSaveLoad.scala:129
+2017-08-26 23:16:53 INFO  FileInputFormat:253 - Total input paths to process : 1
+2017-08-26 23:16:53 INFO  SparkContext:58 - Starting job: first at modelSaveLoad.scala:129
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Got job 9 (first at modelSaveLoad.scala:129) with 1 output partitions
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Final stage: ResultStage 12 (first at modelSaveLoad.scala:129)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ResultStage 12 (MapPartitionsRDD[31] at textFile at modelSaveLoad.scala:129), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_19 stored as values in memory (estimated size 3.1 KB, free 971.2 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_19_piece0 stored as bytes in memory (estimated size 1850.0 B, free 973.0 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_19_piece0 in memory on localhost:40778 (size: 1850.0 B, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 19 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[31] at textFile at modelSaveLoad.scala:129)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 12.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 12.0 (TID 12, localhost, partition 0,PROCESS_LOCAL, 2258 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 12.0 (TID 12)
+2017-08-26 23:16:53 INFO  HadoopRDD:58 - Input split: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/metadata/part-00000:0+200
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 12.0 (TID 12). 2249 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 12.0 (TID 12) in 10 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ResultStage 12 (first at modelSaveLoad.scala:129) finished in 0.010 s
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Job 9 finished: first at modelSaveLoad.scala:129, took 0.020793 s
+2017-08-26 23:16:53 INFO  ParquetRelation:58 - Listing file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data on driver
+2017-08-26 23:16:53 INFO  SparkContext:58 - Starting job: parquet at treeEnsembleModels.scala:476
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Got job 10 (parquet at treeEnsembleModels.scala:476) with 1 output partitions
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Final stage: ResultStage 13 (parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Parents of final stage: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Missing parents: List()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ResultStage 13 (MapPartitionsRDD[33] at parquet at treeEnsembleModels.scala:476), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_20 stored as values in memory (estimated size 45.0 KB, free 1018.0 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_20_piece0 stored as bytes in memory (estimated size 15.1 KB, free 1033.1 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_20_piece0 in memory on localhost:40778 (size: 15.1 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 20 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[33] at parquet at treeEnsembleModels.scala:476)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 13.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 13.0 (TID 13, localhost, partition 0,PROCESS_LOCAL, 2299 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 13.0 (TID 13)
+2017-08-26 23:16:53 INFO  ParquetFileReader:151 - Initiating action with parallelism: 5
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 13.0 (TID 13). 2321 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 13.0 (TID 13) in 22 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ResultStage 13 (parquet at treeEnsembleModels.scala:476) finished in 0.023 s
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Job 10 finished: parquet at treeEnsembleModels.scala:476, took 0.039749 s
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_21 stored as values in memory (estimated size 127.2 KB, free 1160.3 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_21_piece0 stored as bytes in memory (estimated size 13.8 KB, free 1174.1 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_21_piece0 in memory on localhost:40778 (size: 13.8 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 21 from map at treeEnsembleModels.scala:476
+2017-08-26 23:16:53 INFO  ParquetRelation:58 - Reading Parquet file(s) from file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data/part-r-00000-2d0997ee-2cd9-4345-8d4f-5498691e51d0.gz.parquet
+2017-08-26 23:16:53 INFO  SparkContext:58 - Starting job: collect at DecisionTreeModel.scala:265
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Registering RDD 37 (groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Got job 11 (collect at DecisionTreeModel.scala:265) with 1 output partitions
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Final stage: ResultStage 15 (collect at DecisionTreeModel.scala:265)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 14)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Missing parents: List(ShuffleMapStage 14)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ShuffleMapStage 14 (MapPartitionsRDD[37] at groupBy at DecisionTreeModel.scala:263), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_22 stored as values in memory (estimated size 7.5 KB, free 1181.6 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_22_piece0 stored as bytes in memory (estimated size 3.9 KB, free 1185.5 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_22_piece0 in memory on localhost:40778 (size: 3.9 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 22 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[37] at groupBy at DecisionTreeModel.scala:263)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 14.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 14.0 (TID 14, localhost, partition 0,PROCESS_LOCAL, 2275 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 14.0 (TID 14)
+2017-08-26 23:16:53 INFO  ParquetRelation$$anonfun$buildInternalScan$1$$anon$1:58 - Input split: ParquetInputSplit{part: file:/media/anntinu/f776eec1-aeb3-494c-abb9-647751352fb6/anntinu/CBA Rework/weather-prediction/src/main/resources/models/classification/data/part-r-00000-2d0997ee-2cd9-4345-8d4f-5498691e51d0.gz.parquet start: 0 end: 16722 length: 16722 hosts: []}
+2017-08-26 23:16:53 WARN  ParquetRecordReader:193 - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+2017-08-26 23:16:53 INFO  CatalystReadSupport:58 - Going to read the following fields from the Parquet file:
+
+Parquet form:
+message spark_schema {
+  optional int32 treeId;
+  optional int32 nodeId;
+  optional group predict {
+    optional double predict;
+    optional double prob;
+  }
+  optional double impurity;
+  optional boolean isLeaf;
+  optional group split {
+    optional int32 feature;
+    optional double threshold;
+    optional int32 featureType;
+    optional group categories (LIST) {
+      repeated group bag {
+        optional double array;
+      }
+    }
+  }
+  optional int32 leftNodeId;
+  optional int32 rightNodeId;
+  optional double infoGain;
+}
+
+Catalyst form:
+StructType(StructField(treeId,IntegerType,true), StructField(nodeId,IntegerType,true), StructField(predict,StructType(StructField(predict,DoubleType,true), StructField(prob,DoubleType,true)),true), StructField(impurity,DoubleType,true), StructField(isLeaf,BooleanType,true), StructField(split,StructType(StructField(feature,IntegerType,true), StructField(threshold,DoubleType,true), StructField(featureType,IntegerType,true), StructField(categories,ArrayType(DoubleType,true),true)),true), StructField(leftNodeId,IntegerType,true), StructField(rightNodeId,IntegerType,true), StructField(infoGain,DoubleType,true))
+       
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - RecordReader initialized will read a total of 625 records.
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - at row 0. reading next block
+2017-08-26 23:16:53 INFO  CodecPool:178 - Got brand-new decompressor [.gz]
+2017-08-26 23:16:53 INFO  InternalParquetRecordReader:151 - block read in memory in 2 ms. row count = 625
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 14.0 (TID 14). 2253 bytes result sent to driver
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 14.0 (TID 14) in 59 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 14.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ShuffleMapStage 14 (groupBy at DecisionTreeModel.scala:263) finished in 0.059 s
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - looking for newly runnable stages
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - running: Set()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - waiting: Set(ResultStage 15)
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - failed: Set()
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting ResultStage 15 (MapPartitionsRDD[39] at mapValues at DecisionTreeModel.scala:264), which has no missing parents
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_23 stored as values in memory (estimated size 8.6 KB, free 1194.1 KB)
+2017-08-26 23:16:53 INFO  MemoryStore:58 - Block broadcast_23_piece0 stored as bytes in memory (estimated size 4.3 KB, free 1198.4 KB)
+2017-08-26 23:16:53 INFO  BlockManagerInfo:58 - Added broadcast_23_piece0 in memory on localhost:40778 (size: 4.3 KB, free: 1089.6 MB)
+2017-08-26 23:16:53 INFO  SparkContext:58 - Created broadcast 23 from broadcast at DAGScheduler.scala:1006
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[39] at mapValues at DecisionTreeModel.scala:264)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Adding task set 15.0 with 1 tasks
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Starting task 0.0 in stage 15.0 (TID 15, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2017-08-26 23:16:53 INFO  Executor:58 - Running task 0.0 in stage 15.0 (TID 15)
+2017-08-26 23:16:53 INFO  ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2017-08-26 23:16:53 INFO  ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2017-08-26 23:16:53 INFO  Executor:58 - Finished task 0.0 in stage 15.0 (TID 15). 67522 bytes result sent to driver
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - ResultStage 15 (collect at DecisionTreeModel.scala:265) finished in 0.044 s
+2017-08-26 23:16:53 INFO  DAGScheduler:58 - Job 11 finished: collect at DecisionTreeModel.scala:265, took 0.129457 s
+2017-08-26 23:16:53 INFO  TaskSetManager:58 - Finished task 0.0 in stage 15.0 (TID 15) in 45 ms on localhost (1/1)
+2017-08-26 23:16:53 INFO  TaskSchedulerImpl:58 - Removed TaskSet 15.0, whose tasks have all completed, from pool 
+2017-08-26 23:16:53 INFO  CommonUtils:46 - OutputNA|43.653226,-79.3831843,91.7226791382|2015-01-09T03:00:00Z|SUNNY|21.997371207369238|1020.6872112823704|0.6724766796884362
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-08-26 23:16:53 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-08-26 23:16:53 INFO  SparkUI:58 - Stopped Spark web UI at http://192.168.1.5:4040
+2017-08-26 23:16:53 INFO  MapOutputTrackerMasterEndpoint:58 - MapOutputTrackerMasterEndpoint stopped!
+2017-08-26 23:16:53 INFO  MemoryStore:58 - MemoryStore cleared
+2017-08-26 23:16:53 INFO  BlockManager:58 - BlockManager stopped
+2017-08-26 23:16:53 INFO  BlockManagerMaster:58 - BlockManagerMaster stopped
+2017-08-26 23:16:53 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:58 - OutputCommitCoordinator stopped!
+2017-08-26 23:16:53 INFO  SparkContext:58 - Successfully stopped SparkContext
+2017-08-26 23:16:53 INFO  SparkContext:58 - SparkContext already stopped.
+2017-08-26 23:16:53 INFO  ShutdownHookManager:58 - Shutdown hook called
+2017-08-26 23:16:53 INFO  ShutdownHookManager:58 - Deleting directory /tmp/spark-2290453e-0e99-4787-9254-4b81ab63cc0c
+2017-08-26 23:19:25 INFO  SparkContext:58 - Running Spark version 1.6.0
+2017-08-26 23:19:26 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-26 23:19:26 WARN  Utils:70 - Your hostname, Arch-Angel resolves to a loopback address: 127.0.1.1; using 192.168.1.5 instead (on interface wlp6s0)
+2017-08-26 23:19:26 WARN  Utils:70 - Set SPARK_LOCAL_IP if you need to bind to another address
+2017-08-26 23:19:26 INFO  SecurityManager:58 - Changing view acls to: anntinu
+2017-08-26 23:19:26 INFO  SecurityManager:58 - Changing modify acls to: anntinu
+2017-08-26 23:19:26 INFO  SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(anntinu); users with modify permissions: Set(anntinu)
+2017-08-26 23:19:26 INFO  Utils:58 - Successfully started service 'sparkDriver' on port 44941.
+2017-08-26 23:19:27 INFO  Slf4jLogger:80 - Slf4jLogger started
+2017-08-26 23:19:27 INFO  Remoting:74 - Starting remoting
+2017-08-26 23:19:27 INFO  Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.1.5:37889]
+2017-08-26 23:19:27 INFO  Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 37889.
+2017-08-26 23:19:27 INFO  SparkEnv:58 - Registering MapOutputTracker
+2017-08-26 23:19:27 INFO  SparkEnv:58 - Registering BlockManagerMaster
+2017-08-26 23:19:27 INFO  DiskBlockManager:58 - Created local directory at /tmp/blockmgr-a3885723-6781-4dd6-9023-412e0f0f1d11
+2017-08-26 23:19:27 INFO  MemoryStore:58 - MemoryStore started with capacity 1089.8 MB
+2017-08-26 23:19:27 INFO  SparkEnv:58 - Registering OutputCommitCoordinator
+2017-08-26 23:19:28 INFO  Server:272 - jetty-8.y.z-SNAPSHOT
+2017-08-26 23:19:28 INFO  AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2017-08-26 23:19:28 INFO  Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2017-08-26 23:19:28 INFO  SparkUI:58 - Started SparkUI at http://192.168.1.5:4040
+2017-08-26 23:19:28 INFO  Executor:58 - Starting executor ID driver on host localhost
+2017-08-26 23:19:28 INFO  Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35381.
+2017-08-26 23:19:28 INFO  NettyBlockTransferService:58 - Server created on 35381
+2017-08-26 23:19:28 INFO  BlockManagerMaster:58 - Trying to register BlockManager
+2017-08-26 23:19:28 INFO  BlockManagerMasterEndpoint:58 - Registering block manager localhost:35381 with 1089.8 MB RAM, BlockManagerId(driver, localhost, 35381)
+2017-08-26 23:19:28 INFO  BlockManagerMaster:58 - Registered BlockManager
+2017-08-26 23:19:28 ERROR PredictWeather:125 - Invalid Input
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-08-26 23:19:28 INFO  ContextHandler:843 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-08-26 23:19:28 INFO  SparkUI:58 - Stopped Spark web UI at http://192.168.1.5:4040
+2017-08-26 23:19:28 INFO  MapOutputTrackerMasterEndpoint:58 - MapOutputTrackerMasterEndpoint stopped!
+2017-08-26 23:19:29 INFO  MemoryStore:58 - MemoryStore cleared
+2017-08-26 23:19:29 INFO  BlockManager:58 - BlockManager stopped
+2017-08-26 23:19:29 INFO  BlockManagerMaster:58 - BlockManagerMaster stopped
+2017-08-26 23:19:29 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:58 - OutputCommitCoordinator stopped!
+2017-08-26 23:19:29 INFO  SparkContext:58 - Successfully stopped SparkContext
+2017-08-26 23:19:29 INFO  SparkContext:58 - SparkContext already stopped.
+2017-08-26 23:19:29 INFO  RemoteActorRefProvider$RemotingTerminator:74 - Shutting down remote daemon.
+2017-08-26 23:19:29 INFO  RemoteActorRefProvider$RemotingTerminator:74 - Remote daemon shut down; proceeding with flushing remote transports.
+2017-08-26 23:19:29 INFO  ShutdownHookManager:58 - Shutdown hook called
+2017-08-26 23:19:29 INFO  ShutdownHookManager:58 - Deleting directory /tmp/spark-7db633dd-b329-495c-a8db-907e4c0645da
