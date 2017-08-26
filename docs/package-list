@@ -1,11 +1,9 @@
-com.toypredictor.app
-com.toypredictor.app.test
-com.toypredictor.dto
-com.toypredictor.enums
+com.toypredictor.common
+com.toypredictor.common.enums
+com.toypredictor.common.test
 com.toypredictor.exceptions
+com.toypredictor.main
+com.toypredictor.main.test
 com.toypredictor.model
 com.toypredictor.modelbuilder
 com.toypredictor.modelbuilder.test
-com.toypredictor.util.constants
-com.toypredictor.utils
-com.toypredictor.utils.test
