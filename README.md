@@ -1,38 +1,38 @@
-# WeatherPredictor
+# Weather Predictor
 
-Machine Learning model for weather generation using Spark Random Forest Mllib Algorithm in Java.
+Machine Learning model for weather generation using Spark Random Forest MLlib Algorithm in Java.
 
 ## Background
 
 **PROBLEM**
 
-Create a toy simulation of the environment (taking into account things like atmosphere, topography, geography,oceanography, or similar) that evolves over time.
+Create a toy simulation of the environment (taking into account things like atmosphere, topography, geography, oceanography, or similar) that evolves over time.
 
 **Approach**
 
 Here we need to predict the following parameters,
 
-1. Temprature
+1. Temperature
 2. Pressure
 3. Humidity
 4. Weather Condition(Rain/Snow/Sunny).
 
-So for predicting the above parameters we can have three approches
+So for predicting the above parameters we can have three approaches
 
 1. Using weather prediction APIs.
 2. Using weather prediction equation provided by different vendors.
-3. Using Machine Learning approachs.
+3. Using Machine Learning approaches.
 
-Here we are going to uses the Third approch, **ML Approach**, When considering the parameters to predict we can see that the first three(Temprature,Pressure,Humidity) are continues values, So for predicting continues values a **regression model** is the best suit, Then for weather condition prediction which is having fixed outcomes we can go with **classification model**. So we are going to use a **supervised machine learning** algorithm, So we need a dataset of historical values. After obtaining dataset, Next step is **feature selection**.
+Here we are going to uses the Third approach, **ML Approach**, When considering the parameters to predict we can see that the first three( Temperature, Pressure, Humidity) are continues values, So for predicting continues values a **regression model** is the best suit, Then for weather condition prediction which is having fixed outcomes we can go with **classification model**. So we are going to use a **supervised machine learning** algorithm, So we need a dataset of historical values. After obtaining dataset, Next step is **feature selection**.
 
 The following are the set of different features selected for each predictions,
 
-1. Temprature - Latitude, Longitude, Elevation, Month, Day of Month, Hour.
+1. Temperature - Latitude, Longitude, Elevation, Month, Day of Month, Hour.
 2. Pressure -  Latitude, Longitude, Elevation, Month, Day of Month, Hour.
 3. Humidity - Latitude, Longitude, Elevation, Month, Day of Month, Hour.
-4. Weather condition - Temprature, Pressure, Humidity, Latitude, Longitude, Elevation, Month, Day of Month, Hour.
+4. Weather condition - Temperature, Pressure, Humidity, Latitude, Longitude, Elevation, Month, Day of Month, Hour.
 
-So before continuing to next step ML Algorithm need to be selected. I had selected **Random Forest** algorithm since it is a ensemble method which uses multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Here in MLLib, Random Forest uses decision tree as its base model. Random Forests can be less prone to overfitting. Training more trees in a Random Forest reduces the likelihood of overfitting. After selecting the algorithm next steps are model training, testing and improvement.
+So before continuing to next step ML Algorithm need to be selected. I had selected **Random Forest** algorithm since it is a ensemble method which uses multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Here in MLlib, Random Forest uses decision tree as its base model. Random Forests can be less prone to overfitting. Training more trees in a Random Forest reduces the likelihood of overfitting. After selecting the algorithm next steps are model training, testing and improvement.
 
 ## Random Forest ML Algorithm
 
