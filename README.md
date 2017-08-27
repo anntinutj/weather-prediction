@@ -122,7 +122,7 @@ Regression: Averaging. Each tree predicts a real value. The label is predicted t
 
 ## Getting Started
 To run the application, 
-Change PopertyFile **model_prep.properties** accordingly
+Change property file **model_prep.properties** accordingly
 
 Build the maven project
 
@@ -134,7 +134,7 @@ mvn clean install
 ## Run the project
 Follow the steps to get output  
 
-To Train & Evaluvate Models
+To Train & Evaluate Models
 ```
 spark-submit --class com.toypredictor.modelbuilder.RandomForestModelBuilder <jarlocation>
 eg: spark-submit --class com.toypredictor.modelbuilder.RandomForestModelBuilder weather-prediction-0.0.1-SNAPSHOT.jar
@@ -143,7 +143,7 @@ eg: spark-submit --class com.toypredictor.modelbuilder.RandomForestModelBuilder 
 
 To Predict Weather
 ```
-spark-submit --class com.toypredictor.main.PredictWeather <jarlocation> --lat <latitude> --long  <longitude> --ele  <elevation> --time <unixTimeStamp> --out <outputLocation>
+spark-submit --class com.toypredictor.main.PredictWeather <jarlocation> --lati <latitude> --long  <longitude> --elev  <elevation> --time <unixTimeStamp> --out <outputLocation>
 
 eg: spark-submit --class com.toypredictor.main.PredictWeather weather-prediction-0.0.1-SNAPSHOT.jar --lati 24.8614622 --long 67.0099388 --elev 9.870092392 --time 1423123200 --out /home/usr/output.txt
 ```
